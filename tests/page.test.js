@@ -63,7 +63,7 @@ test('українська сторінка зібралась і оголошу
 test('шляхи на українській сторінці піднімаються на рівень', () => {
   const uk = page('uk/index.html');
   assert.match(uk, /href="\.\.\/style\.css"/);
-  assert.match(uk, /src="\.\.\/assets\/shots\/suits\.jpg\?v=[0-9a-f]{8}"/);
+  assert.match(uk, /src="\.\.\/assets\/shots\/verdict\.jpg\?v=[0-9a-f]{8}"/);
   assert.doesNotMatch(uk, /src="assets\//);
 });
 
@@ -233,13 +233,14 @@ test('контакт у політиці — той самий, що в збір
 // дані для пошуку. Скрипт із чужого домену — наприклад, офіційний сніпет,
 // що тягне array.js з posthog — тест не пропустить: сторінка обіцяє не
 // звертатися до чужих серверів по код.
-const ALL_PAGES = [...PRIVACY, 'index.html', 'uk/index.html', 'pl/index.html', 'es/index.html'];
+const CHALLENGE = ['challenge/index.html', 'uk/challenge/index.html', 'pl/challenge/index.html', 'es/challenge/index.html'];
+const ALL_PAGES = [...PRIVACY, ...CHALLENGE, 'index.html', 'uk/index.html', 'pl/index.html', 'es/index.html'];
 
 test('скрипти — лише свої й структуровані дані', () => {
   for (const rel of ALL_PAGES) {
     const html = page(rel);
     for (const [tag] of html.matchAll(/<script\b[^>]*>/g)) {
-      const own = /src="(?:\.\.\/)*assets\/(?:vendor\/posthog|analytics)\.js"/.test(tag);
+      const own = /src="(?:\.\.\/)*assets\/(?:vendor\/posthog|analytics|challenge)\.js"/.test(tag);
       const data = /type="application\/ld\+json"/.test(tag);
       assert.ok(own || data, `${rel}: чужий скрипт ${tag}`);
     }
@@ -301,4 +302,15 @@ test('кожен розділ головної має назву для поді
   const html = page('index.html');
   const sections = html.match(/<section\b[^>]*>/g);
   assert.ok(sections.every((tag) => /data-section="[a-z]+"/.test(tag)));
+});
+
+test('запрошення до челенджу: noindex, без карти сайту, кнопка в застосунок збирається скриптом', () => {
+  for (const rel of CHALLENGE) {
+    const html = page(rel);
+    assert.match(html, /name="robots" content="noindex"/, rel);
+    assert.match(html, /data-open href="lelia:\/\/challenge\/new" hidden/, rel);
+    assert.match(html, /assets\/challenge\.js/, rel);
+  }
+  const sitemap = fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8');
+  assert.doesNotMatch(sitemap, /\/challenge\//);
 });

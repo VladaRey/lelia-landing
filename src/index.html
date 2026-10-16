@@ -36,6 +36,7 @@
         </a>
         <nav class="nav__links" aria-label="{{nav.aria}}">
           <a href="#how">{{nav.how}}</a>
+          <a href="#challenges">{{nav.challenges}}</a>
           <a href="#why">{{nav.why}}</a>
           <a href="#limits">{{nav.limits}}</a>
           {{@langswitch}}
@@ -68,10 +69,10 @@
         </div>
 
         <picture>
-          <source srcset="{{@base}}assets/shots/suits.webp" type="image/webp" />
+          <source srcset="{{@base}}assets/shots/verdict.webp" type="image/webp" />
           <img
             class="shot shot--lift hero__shot"
-            src="{{@base}}assets/shots/suits.jpg"
+            src="{{@base}}assets/shots/verdict.jpg"
             width="540" height="1169"
             loading="eager" fetchpriority="high" decoding="async"
             alt="{{hero.alt}}" />
@@ -101,169 +102,8 @@
       </dl>
     </section>
 
-    <!-- ── 3 · сьогодні: що вдягнути ────────────────────────────── -->
-    <section class="section" id="how" data-section="today" data-order="3">
-      <div class="wrap">
-        <div style="max-width: 43.75rem">
-          <p class="eyebrow">{{today.eyebrow}}</p>
-          <h2 class="display h-section">{{today.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{today.lede}}
-          </p>
-        </div>
-
-        <div class="ask">
-          <div>
-            <picture>
-              <source srcset="{{@base}}assets/shots/outfits.webp" type="image/webp" />
-              <img
-                class="shot"
-                src="{{@base}}assets/shots/outfits.jpg"
-                width="540" height="1169"
-                loading="lazy" decoding="async"
-                alt="{{outfits.alt}}" />
-            </picture>
-            <h3>{{today.picks.h}}</h3>
-            <p class="prose">
-              {{today.picks.p}}
-            </p>
-          </div>
-          <div>
-            <picture>
-              <source srcset="{{@base}}assets/shots/builder.webp" type="image/webp" />
-              <img
-                class="shot"
-                src="{{@base}}assets/shots/builder.jpg"
-                width="540" height="1169"
-                loading="lazy" decoding="async"
-                alt="{{builder.alt}}" />
-            </picture>
-            <h3>{{today.build.h}}</h3>
-            <p class="prose">
-              {{today.build.p}}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 4 · число проти причини ────────────────────────────────── -->
-    <section class="section band" data-section="wedge" data-order="4">
-      <div class="wrap">
-        <div style="max-width: 47.5rem">
-          <p class="eyebrow">{{wedge.eyebrow}}</p>
-          <h2 class="display h-wide">
-            {{wedge.h}}
-          </h2>
-        </div>
-
-        <div class="wedge__grid">
-          <div class="wedge__body">
-            <div class="score-card">
-              <p class="eyebrow">{{wedge.score.eyebrow}}</p>
-              <div class="score-card__row">
-                <p class="score-card__number">92%</p>
-                <p class="score-card__note">
-                  {{wedge.score.note}}
-                </p>
-              </div>
-            </div>
-
-            <div class="reason-card">
-              <p class="eyebrow">{{wedge.reason.eyebrow}}</p>
-              <!-- Перша причина працює на оцінку, три інші — штрафи за однією
-                   з трьох осей. Позначка повторює це кольором: галочка
-                   берези й теплий мінус. -->
-              <ul>
-                <li class="reason reason--plus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 12.4l3 3 6-6.3" /></svg><span>{{quote.reason1}}</span></li>
-                <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason2}}</span></li>
-                <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason3}}</span></li>
-                <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason4}}</span></li>
-              </ul>
-            </div>
-
-            <p class="prose">
-              {{wedge.p}}
-            </p>
-          </div>
-
-          <picture>
-            <source srcset="{{@base}}assets/shots/scores.webp" type="image/webp" />
-            <img
-              class="shot shot--lift wedge__shot"
-              src="{{@base}}assets/shots/scores.jpg"
-              width="540" height="1169"
-              loading="lazy" decoding="async"
-              alt="{{wedge.alt}}" />
-          </picture>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 6 · календар ───────────────────────────────────────────── -->
-    <section class="section" data-section="calendar" data-order="5">
-      <div class="wrap calendar">
-        <div class="calendar__text">
-          <p class="eyebrow">{{calendar.eyebrow}}</p>
-          <h2 class="display h-section">{{calendar.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{calendar.lede}}
-          </p>
-          <h3>{{calendar.plan.h}}</h3>
-          <p class="prose">
-            {{calendar.plan.p}}
-          </p>
-          <h3>{{calendar.stats.h}}</h3>
-          <p class="prose">
-            {{calendar.stats.p}}
-          </p>
-        </div>
-
-        <picture>
-          <source srcset="{{@base}}assets/shots/plan.webp" type="image/webp" />
-          <img
-            class="shot shot--lift calendar__shot"
-            src="{{@base}}assets/shots/plan.jpg"
-            width="540" height="1169"
-            loading="lazy" decoding="async"
-            alt="{{calendar.alt}}" />
-        </picture>
-      </div>
-    </section>
-
-    <!-- ── 7 · валіза ─────────────────────────────────────────────── -->
-    <section class="section band" data-section="trips" data-order="6">
-      <div class="wrap calendar">
-        <div class="calendar__text">
-          <p class="eyebrow">{{trips.eyebrow}}</p>
-          <h2 class="display h-section">{{trips.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{trips.lede}}
-          </p>
-          <h3>{{trips.days.h}}</h3>
-          <p class="prose">
-            {{trips.days.p}}
-          </p>
-          <h3>{{trips.pack.h}}</h3>
-          <p class="prose">
-            {{trips.pack.p}}
-          </p>
-        </div>
-
-        <picture>
-          <source srcset="{{@base}}assets/shots/trip.webp" type="image/webp" />
-          <img
-            class="shot shot--lift calendar__shot"
-            src="{{@base}}assets/shots/trip.jpg"
-            width="540" height="1169"
-            loading="lazy" decoding="async"
-            alt="{{trips.alt}}" />
-        </picture>
-      </div>
-    </section>
-
-    <!-- ── 8 · примірочна ─────────────────────────────────────────── -->
-    <section class="section" data-section="shop" data-order="7">
+    <!-- ── 3 · у магазині: головна дія ─────────────────────────── -->
+    <section class="section" id="how" data-section="shop" data-order="3">
       <div class="wrap">
         <div style="max-width: 45rem">
           <p class="eyebrow">{{shop.eyebrow}}</p>
@@ -323,8 +163,223 @@
       </div>
     </section>
 
+    <!-- ── 4 · ціна за вихід ─────────────────────────────────────── -->
+    <section class="section band" data-section="cost" data-order="4">
+      <div class="wrap cost">
+        <div style="max-width: 43.75rem">
+          <p class="eyebrow">{{cost.eyebrow}}</p>
+          <h2 class="display h-section">{{cost.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">{{cost.lede}}</p>
+        </div>
+
+        <div class="cost__pair">
+          <div class="cost__item">
+            <h3>{{cost.a.name}}</h3>
+            <p class="cost__formula">{{cost.a.formula}}</p>
+            <p class="cost__result">{{cost.a.result}}</p>
+          </div>
+          <div class="cost__item cost__item--win">
+            <h3>{{cost.b.name}}</h3>
+            <p class="cost__formula">{{cost.b.formula}}</p>
+            <p class="cost__result">{{cost.b.result}}</p>
+          </div>
+        </div>
+        <p class="prose cost__note">{{cost.note}}</p>
+      </div>
+    </section>
+
+    <!-- ── 5 · челенджі ──────────────────────────────────────────── -->
+    <section class="section" id="challenges" data-section="challenges" data-order="5">
+      <div class="wrap">
+        <div style="max-width: 43.75rem">
+          <p class="eyebrow">{{challenges.eyebrow}}</p>
+          <h2 class="display h-section">{{challenges.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">{{challenges.lede}}</p>
+        </div>
+
+        <ul class="cards">
+          <li>
+            <h3>{{challenges.ten.h}}</h3>
+            <p class="prose">{{challenges.ten.p}}</p>
+          </li>
+          <li>
+            <h3>{{challenges.capsule.h}}</h3>
+            <p class="prose">{{challenges.capsule.p}}</p>
+          </li>
+          <li>
+            <h3>{{challenges.nobuy.h}}</h3>
+            <p class="prose">{{challenges.nobuy.p}}</p>
+          </li>
+        </ul>
+        <p class="prose cards__more">{{challenges.more}}</p>
+        <p class="prose cards__more">{{challenges.friends}}</p>
+      </div>
+    </section>
+
+    <!-- ── 3 · сьогодні: що вдягнути ────────────────────────────── -->
+    <section class="section" data-section="today" data-order="6">
+      <div class="wrap">
+        <div style="max-width: 43.75rem">
+          <p class="eyebrow">{{today.eyebrow}}</p>
+          <h2 class="display h-section">{{today.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">
+            {{today.lede}}
+          </p>
+        </div>
+
+        <div class="ask">
+          <div>
+            <picture>
+              <source srcset="{{@base}}assets/shots/outfits.webp" type="image/webp" />
+              <img
+                class="shot"
+                src="{{@base}}assets/shots/outfits.jpg"
+                width="540" height="1169"
+                loading="lazy" decoding="async"
+                alt="{{outfits.alt}}" />
+            </picture>
+            <h3>{{today.picks.h}}</h3>
+            <p class="prose">
+              {{today.picks.p}}
+            </p>
+          </div>
+          <div>
+            <picture>
+              <source srcset="{{@base}}assets/shots/builder.webp" type="image/webp" />
+              <img
+                class="shot"
+                src="{{@base}}assets/shots/builder.jpg"
+                width="540" height="1169"
+                loading="lazy" decoding="async"
+                alt="{{builder.alt}}" />
+            </picture>
+            <h3>{{today.build.h}}</h3>
+            <p class="prose">
+              {{today.build.p}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4 · число проти причини ────────────────────────────────── -->
+    <section class="section band" data-section="wedge" data-order="7">
+      <div class="wrap">
+        <div style="max-width: 47.5rem">
+          <p class="eyebrow">{{wedge.eyebrow}}</p>
+          <h2 class="display h-wide">
+            {{wedge.h}}
+          </h2>
+        </div>
+
+        <div class="wedge__grid">
+          <div class="wedge__body">
+            <div class="score-card">
+              <p class="eyebrow">{{wedge.score.eyebrow}}</p>
+              <div class="score-card__row">
+                <p class="score-card__number">92%</p>
+                <p class="score-card__note">
+                  {{wedge.score.note}}
+                </p>
+              </div>
+            </div>
+
+            <div class="reason-card">
+              <p class="eyebrow">{{wedge.reason.eyebrow}}</p>
+              <!-- Перша причина працює на оцінку, три інші — штрафи за однією
+                   з трьох осей. Позначка повторює це кольором: галочка
+                   берези й теплий мінус. -->
+              <ul>
+                <li class="reason reason--plus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 12.4l3 3 6-6.3" /></svg><span>{{quote.reason1}}</span></li>
+                <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason2}}</span></li>
+                <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason3}}</span></li>
+                <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason4}}</span></li>
+              </ul>
+            </div>
+
+            <p class="prose">
+              {{wedge.p}}
+            </p>
+          </div>
+
+          <picture>
+            <source srcset="{{@base}}assets/shots/scores.webp" type="image/webp" />
+            <img
+              class="shot shot--lift wedge__shot"
+              src="{{@base}}assets/shots/scores.jpg"
+              width="540" height="1169"
+              loading="lazy" decoding="async"
+              alt="{{wedge.alt}}" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6 · календар ───────────────────────────────────────────── -->
+    <section class="section" data-section="calendar" data-order="8">
+      <div class="wrap calendar">
+        <div class="calendar__text">
+          <p class="eyebrow">{{calendar.eyebrow}}</p>
+          <h2 class="display h-section">{{calendar.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">
+            {{calendar.lede}}
+          </p>
+          <h3>{{calendar.plan.h}}</h3>
+          <p class="prose">
+            {{calendar.plan.p}}
+          </p>
+          <h3>{{calendar.stats.h}}</h3>
+          <p class="prose">
+            {{calendar.stats.p}}
+          </p>
+        </div>
+
+        <picture>
+          <source srcset="{{@base}}assets/shots/plan.webp" type="image/webp" />
+          <img
+            class="shot shot--lift calendar__shot"
+            src="{{@base}}assets/shots/plan.jpg"
+            width="540" height="1169"
+            loading="lazy" decoding="async"
+            alt="{{calendar.alt}}" />
+        </picture>
+      </div>
+    </section>
+
+    <!-- ── 7 · валіза ─────────────────────────────────────────────── -->
+    <section class="section band" data-section="trips" data-order="9">
+      <div class="wrap calendar">
+        <div class="calendar__text">
+          <p class="eyebrow">{{trips.eyebrow}}</p>
+          <h2 class="display h-section">{{trips.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">
+            {{trips.lede}}
+          </p>
+          <h3>{{trips.days.h}}</h3>
+          <p class="prose">
+            {{trips.days.p}}
+          </p>
+          <h3>{{trips.pack.h}}</h3>
+          <p class="prose">
+            {{trips.pack.p}}
+          </p>
+        </div>
+
+        <picture>
+          <source srcset="{{@base}}assets/shots/trip.webp" type="image/webp" />
+          <img
+            class="shot shot--lift calendar__shot"
+            src="{{@base}}assets/shots/trip.jpg"
+            width="540" height="1169"
+            loading="lazy" decoding="async"
+            alt="{{trips.alt}}" />
+        </picture>
+      </div>
+    </section>
+
+
     <!-- ── 8 · як почати: сфотографувати речі ──────────────────────── -->
-    <section class="section band" data-section="own" data-order="8">
+    <section class="section band" data-section="own" data-order="10">
       <div class="wrap own">
         <div>
           <p class="eyebrow">{{own.eyebrow}}</p>
@@ -356,45 +411,9 @@
       </div>
     </section>
 
-    <!-- ── 7 · колірний тип ───────────────────────────────────────── -->
-    <section class="section" data-section="colortype" data-order="9">
-      <div class="wrap colortype">
-        <div>
-          <p class="eyebrow">{{colortype.eyebrow}}</p>
-          <h2 class="display h-section">
-            {{colortype.h}}
-          </h2>
-
-          <ul class="points">
-            <li>
-              <span class="points__n" aria-hidden="true">01</span>
-              <p class="prose">
-                {{colortype.point1}}
-              </p>
-            </li>
-            <li>
-              <span class="points__n" aria-hidden="true">02</span>
-              <p class="prose">
-                {{colortype.point2}}
-              </p>
-            </li>
-          </ul>
-        </div>
-
-        <picture>
-          <source srcset="{{@base}}assets/shots/colortype.webp" type="image/webp" />
-          <img
-            class="shot shot--lift colortype__shot"
-            src="{{@base}}assets/shots/colortype.jpg"
-            width="540" height="1169"
-            loading="lazy" decoding="async"
-            alt="{{colortype.alt}}" />
-        </picture>
-      </div>
-    </section>
 
     <!-- ── 9 · маніфест ───────────────────────────────────────────── -->
-    <section class="section dark manifesto" id="why" data-section="manifesto" data-order="10">
+    <section class="section dark manifesto" id="why" data-section="manifesto" data-order="11">
       <div class="wrap">
         <div style="max-width: 51.25rem">
           <p class="eyebrow">{{manifesto.eyebrow}}</p>
@@ -417,7 +436,7 @@
     </section>
 
     <!-- ── 10 · чого не робить ────────────────────────────────────── -->
-    <section class="section" id="limits" data-section="limits" data-order="11">
+    <section class="section" id="limits" data-section="limits" data-order="12">
       <div class="wrap">
         <div style="max-width: 43.75rem">
           <p class="eyebrow">{{limits.eyebrow}}</p>
@@ -463,7 +482,7 @@
     </section>
 
     <!-- ── 11 · питання ───────────────────────────────────────────── -->
-    <section class="section band" data-section="faq" data-order="12">
+    <section class="section band" data-section="faq" data-order="13">
       <div class="wrap faq">
         <div>
           <p class="eyebrow">{{faq.eyebrow}}</p>
@@ -518,7 +537,7 @@
     </section>
 
     <!-- ── 12 · фінальний заклик ──────────────────────────────────── -->
-    <section class="section finale" id="get" data-section="finale" data-order="13">
+    <section class="section finale" id="get" data-section="finale" data-order="14">
       <div class="wrap">
         <div class="finale__inner">
           <h2 class="display">{{finale.h}}</h2>

@@ -30,7 +30,11 @@ redirect on `navigator.language`: each language is a separate static page with
 its own URL, its own `<html lang>`, its own canonical link, and `hreflang`
 links to the others.
 
-- `src/index.html` and `src/privacy.html` — the templates, one per page.
+- `src/index.html`, `src/privacy.html` and `src/challenge.html` — the templates, one per page.
+  `challenge.html` is the invite page the app shares for a challenge
+  (`/challenge/?k=ten_ten&s=2026-10-20`): `noindex`, left out of the sitemap,
+  and `assets/challenge.js` picks the challenge's name from the markup and
+  builds the `lelia://challenge/new?…` link that opens the app.
   Every translatable string is a `{{key}}` named after its place on the page
   (`hero.title`, `faq.cost.q`, `privacy.network.p1`), so a template reads as a
   table of contents.
@@ -226,10 +230,13 @@ without recording and without GeoIP.
   page's `hero.title` beside two 1.2 screenshots on the brand green: Home with
   today's outfits, and a score opened into its explanation (`today` and
   `suits` from `assets/shots`). Re-render them whenever those two shots change.
+  **To do for 1.3:** the cards still carry the 1.2 headline and shots;
+  re-render them with the new `hero.title` once the 1.3 screenshots are in
+  `assets/shots`.
 - `apple-itunes-app` — Safari on iPhone shows the App Store smart banner.
 - JSON-LD on the home page: `MobileApplication` (iOS, free) and `FAQPage`
   built from the `faq.*` strings, so search can show the answers directly.
-- `sitemap.xml` (all eight pages with their language alternates) and
+- `sitemap.xml` (the home and privacy pages in every language, with their alternates — the challenge invite page is left out) and
   `robots.txt` pointing at it, both written by the build.
 
 ## Assets
