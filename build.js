@@ -50,6 +50,9 @@ function checkKeys(templates, strings, lang) {
 const PAGES = [
   { template: 'index.html', dir: '' },
   { template: 'privacy.html', dir: 'privacy' },
+  // Запрошення до челенджу з застосунку: живе з параметрів посилання, тож у
+  // карті сайту йому нема чого робити (і noindex у самій сторінці).
+  { template: 'challenge.html', dir: 'challenge', sitemap: false },
 ];
 
 // Додати мову — дописати код сюди і покласти поруч i18n/<code>.json.
@@ -172,8 +175,10 @@ const attr = (value) => stripTags(value).replace(/&/g, '&amp;').replace(/"/g, '&
  * на сторінці (`assets/og/og-<lang>.png`).
  */
 function social(lang, langs, strings, dir) {
-  const title = attr(strings[dir ? 'privacy.meta.title' : 'meta.title']);
-  const description = attr(strings[dir ? 'privacy.meta.description' : 'meta.description']);
+  // Підсторінка бере заголовок зі своїх ключів: `privacy.meta.title`,
+  // `challenge.meta.title` — тека сторінки й префікс ключів збігаються.
+  const title = attr(strings[dir ? `${dir}.meta.title` : 'meta.title']);
+  const description = attr(strings[dir ? `${dir}.meta.description` : 'meta.description']);
   const image = `${SITE}assets/og/og-${lang}.png`;
   const lines = [
     `<meta property="og:type" content="website" />`,
@@ -341,7 +346,7 @@ function build({ root, outDir, langs = LANGS, defaultLang = DEFAULT_LANG, pages 
 
   // Карта сайту з усіма мовними версіями кожної сторінки й robots.txt, що на
   // неї вказує: так пошук знаходить усі вісім адрес, а не лише корінь.
-  const urls = pages.flatMap((page) =>
+  const urls = pages.filter((page) => page.sitemap !== false).flatMap((page) =>
     langs.map((lang) => {
       const links = langs
         .map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${pageUrl(l, page.dir)}" />`)

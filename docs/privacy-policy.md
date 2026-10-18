@@ -59,7 +59,7 @@ specifically select.
 look up today's forecast. You can name a city instead and never grant it. See
 **Weather** below for what is sent.
 
-**Notifications.** Only if you turn them on, in Profile → Settings →
+**Notifications.** Only if you turn them on, in Wardrobe → ⚙ Settings →
 Notifications, or say yes when the app offers them once after your first
 planned outfit or trip. They are local: the phone schedules them itself, with
 no server and no push token, so nothing but your device knows what to remind
@@ -91,7 +91,11 @@ colour was kept or corrected by hand, and whether removing the background
 worked; whether the colour-type questions were finished and a score's
 explanation was opened; whether a suggested outfit was opened, saved, worn,
 planned ahead or shared (for a plan, only how many days ahead and whether an
-occasion was named, never the name); how trips, the weather suggestions, the
+occasion was named, never the name); whether a shop check showed a verdict
+and which decision was made (the verdict band, the number of outfits and
+similar pieces, and whether a price was entered — never the price or the
+photo); which challenges were started and finished and whether their cards
+were shared; how trips, the weather suggestions, the
 wishlist and importing several photos are used — for example, how many days a
 trip lasts or how many outfits were found; whether a backup was saved or
 restored, with the number of items only; and whether notifications were turned
@@ -118,9 +122,9 @@ off.
 
 Counting starts on the first launch, so we can see where people get stuck
 before their first piece and first outfit. You can switch it off at any time in
-**Profile → Settings → Data and privacy → Anonymous usage statistics**; that
-stops both the statistics and the crash reports, and the choice survives a
-profile reset.
+**Wardrobe → ⚙ Settings → Data → Anonymous usage statistics**; that stops
+both the statistics and the crash reports, and the choice survives “Reset
+everything”.
 
 PostHog stores the events in the European Union and acts as a processor on our
 behalf. Its own policy is at posthog.com/privacy.
@@ -181,8 +185,7 @@ Apple, not by Lelia, and is covered by Apple's privacy policy.
 ## Deleting your data
 
 You can delete individual items, outfits and trips inside the app at any time,
-or reset your profile (at the bottom of the Profile tab) to erase all of them
-at once. Backup files you saved are wherever you put them; delete them there.
+or use “Reset everything” in Settings to erase all of them at once. Backup files you saved are wherever you put them; delete them there.
 
 Deleting the app removes its database and every photo stored inside it from
 your device. Nothing from your wardrobe was ever sent anywhere, so that is the

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="{{@lang}}" data-page="{{@page}}" data-store-pt="{{@storept}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{challenge.meta.title}}</title>
+    <link rel="canonical" href="{{@canonical}}" />
+    {{@alternates}}
+    <meta
+      name="description"
+      content="{{challenge.meta.description}}" />
+    <meta name="color-scheme" content="light" />
+    <!-- Сторінка-запрошення живе з параметрів посилання — у пошуку їй нема що показати. -->
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#f6f2ea" />
+
+    <link rel="icon" href="{{@base}}lelia-logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="{{@base}}apple-touch-icon.png" type="image/png" sizes="180x180" />
+    <link rel="apple-touch-icon" href="{{@base}}apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="{{@base}}style.css" />
+
+    {{@social}}
+    {{@jsonld}}
+    {{@analytics}}
+  </head>
+  <body>
+    <!-- ── шапка ──────────────────────────────────────────────────── -->
+    <header class="nav">
+      <div class="wrap nav__inner">
+        <a class="nav__brand" href="{{@home}}">
+          <span class="wordmark nav__wordmark"><svg class="sprout" viewBox="0 0 24 48" aria-hidden="true" focusable="false"><path d="M12 46.5V15" /><path d="M12 17C7.2 16 4.6 11.4 5 6c4.6 1 7 5 7 11Z" /><path d="M12 23.5c4-1.8 7.4-4.3 8.4-9.6-4.6.1-7.8 3.4-8.4 9.6Z" /></svg><span>lelia</span></span>
+        </a>
+        <nav class="nav__links" aria-label="{{nav.aria}}">
+          <a href="{{@home}}">{{challenge.back}}</a>
+          {{@langswitch}}
+        </nav>
+      </div>
+    </header>
+
+    <!-- ── запрошення до челенджу ─────────────────────────────────
+         Посилання з застосунку: /challenge/?k=ten_ten&s=2026-10-20&b=2000&m=2.
+         Без параметрів сторінка розповідає про челенджі загалом. Назви
+         челенджів лежать у розмітці (data-kind), а скрипт лише вибирає
+         потрібну й збирає посилання в застосунок — текстів у JS немає. -->
+    <main class="section">
+      <article class="wrap legal invite" data-invite>
+        <p class="eyebrow">{{challenge.eyebrow}}</p>
+        <h1 class="display h-section">
+          <span data-kind="">{{challenge.h}}</span>
+          <span data-kind="ten_ten" hidden>{{challenge.kind.ten_ten}}</span>
+          <span data-kind="capsule" hidden>{{challenge.kind.capsule}}</span>
+          <span data-kind="no_buy" hidden>{{challenge.kind.no_buy}}</span>
+          <span data-kind="budget" hidden>{{challenge.kind.budget}}</span>
+          <span data-kind="forgotten" hidden>{{challenge.kind.forgotten}}</span>
+          <span data-kind="second_life" hidden>{{challenge.kind.second_life}}</span>
+        </h1>
+        <p class="lede">
+          <span data-rule="">{{challenge.lede}}</span>
+          <span data-rule="ten_ten" hidden>{{challenge.rule.ten_ten}}</span>
+          <span data-rule="capsule" hidden>{{challenge.rule.capsule}}</span>
+          <span data-rule="no_buy" hidden>{{challenge.rule.no_buy}}</span>
+          <span data-rule="budget" hidden>{{challenge.rule.budget}}</span>
+          <span data-rule="forgotten" hidden>{{challenge.rule.forgotten}}</span>
+          <span data-rule="second_life" hidden>{{challenge.rule.second_life}}</span>
+        </p>
+        <p class="prose invite__start" data-start hidden>{{challenge.start}} <strong data-start-date></strong></p>
+
+        <div class="get get--bare invite__actions">
+          <a class="appstore invite__open" data-open href="lelia://challenge/new" hidden>{{challenge.open}}</a>
+          <a class="appstore" href="{{@store}}" data-place="challenge">
+            <svg class="appstore__logo" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.922-.987 1.83 0 2.36.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.208-1.23-3.234-4.883-.026-3.055 2.497-4.52 2.611-4.588-1.429-2.104-3.649-2.34-4.404-2.379-2-.156-3.661 1.09-4.585 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.346.104 2.719-.688 3.56-1.701" />
+            </svg>
+            <span class="appstore__text">
+              <span class="appstore__pre">{{store.pre}}</span>
+              <span class="appstore__name">App Store</span>
+            </span>
+          </a>
+        </div>
+
+        <h2 class="legal__h">{{challenge.how.h}}</h2>
+        <ol class="prose legal__list">
+          <li>{{challenge.how.li1}}</li>
+          <li>{{challenge.how.li2}}</li>
+          <li>{{challenge.how.li3}}</li>
+        </ol>
+        <p class="fineprint">{{challenge.fine}}</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <div class="site-footer__left">
+          <span class="wordmark site-footer__wordmark"><svg class="sprout" viewBox="0 0 24 48" aria-hidden="true" focusable="false"><path d="M12 46.5V15" /><path d="M12 17C7.2 16 4.6 11.4 5 6c4.6 1 7 5 7 11Z" /><path d="M12 23.5c4-1.8 7.4-4.3 8.4-9.6-4.6.1-7.8 3.4-8.4 9.6Z" /></svg><span>lelia</span></span>
+          <p class="site-footer__note">
+            {{footer.note}}
+          </p>
+          <p class="site-footer__fine">
+            <span>{{footer.cookies}}</span>
+            <span>{{footer.copyright}}</span>
+          </p>
+        </div>
+
+        <!-- div, а не p: <details> — не phrasing content, і всередині <p>
+             парсер закрив би абзац перед ним, розваливши весь рядок. -->
+        <div class="site-footer__right">
+          {{@langswitch}}
+          <a href="{{@home}}">{{challenge.back}}</a>
+        </div>
+      </div>
+    </footer>
+    <script defer src="{{@base}}assets/challenge.js"></script>
+  </body>
+</html>
