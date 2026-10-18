@@ -47,7 +47,7 @@ test('кожна сторінка отримує свою мову й свій �
 test('шляхи в мовній теці піднімаються на рівень', () => {
   const { outDir } = run();
   const uk = fs.readFileSync(path.join(outDir, 'uk', 'index.html'), 'utf8');
-  assert.match(uk, /href="\.\.\/style\.css"/);
+  assert.match(uk, /href="\.\.\/style\.css(\?v=[0-9a-f]{8})?"/);
   assert.match(uk, /src="\.\.\/assets\/shots\/x\.txt"/);
 });
 
@@ -110,7 +110,7 @@ test('підсторінка лягає в теку всередині своє�
 test('шляхи з підсторінки мовної теки піднімаються на два рівні', () => {
   const { outDir } = run();
   const html = fs.readFileSync(path.join(outDir, 'uk', 'privacy', 'index.html'), 'utf8');
-  assert.match(html, /href="\.\.\/\.\.\/style\.css"/);
+  assert.match(html, /href="\.\.\/\.\.\/style\.css(\?v=[0-9a-f]{8})?"/);
 });
 
 test('з підсторінки посилання додому веде на головну своєї мови', () => {

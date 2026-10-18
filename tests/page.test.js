@@ -62,7 +62,7 @@ test('українська сторінка зібралась і оголошу
 
 test('шляхи на українській сторінці піднімаються на рівень', () => {
   const uk = page('uk/index.html');
-  assert.match(uk, /href="\.\.\/style\.css"/);
+  assert.match(uk, /href="\.\.\/style\.css(\?v=[0-9a-f]{8})?"/);
   assert.match(uk, /src="\.\.\/assets\/shots\/verdict\.jpg\?v=[0-9a-f]{8}"/);
   assert.doesNotMatch(uk, /src="assets\//);
 });
@@ -179,7 +179,7 @@ test('перемикач мов на політиці не викидає на �
 
 test('стилі й іконки з мовної політики піднімаються на два рівні', () => {
   const html = page('uk/privacy/index.html');
-  assert.match(html, /href="\.\.\/\.\.\/style\.css"/);
+  assert.match(html, /href="\.\.\/\.\.\/style\.css(\?v=[0-9a-f]{8})?"/);
   assert.match(html, /rel="apple-touch-icon" href="\.\.\/\.\.\/apple-touch-icon\.png"/);
 });
 

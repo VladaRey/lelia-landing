@@ -298,6 +298,13 @@ function fingerprint(html, root) {
     if (!fs.existsSync(file)) return match;
     const hash = crypto.createHash('sha1').update(fs.readFileSync(file)).digest('hex').slice(0, 8);
     return `${match}?v=${hash}`;
+  }).replace(/(?<=href="[^"]*)style\.css(?=")/g, (match) => {
+    // Стилі теж: без мітки браузер тримав старий style.css, і нові блоки
+    // (клітинки челенджів, згортання FAQ) лишались без оформлення.
+    const file = path.join(root, 'style.css');
+    if (!fs.existsSync(file)) return match;
+    const hash = crypto.createHash('sha1').update(fs.readFileSync(file)).digest('hex').slice(0, 8);
+    return `${match}?v=${hash}`;
   });
 }
 
