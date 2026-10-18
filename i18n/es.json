@@ -194,7 +194,6 @@
   "challenge.rule.forgotten": "En dos semanas, ponte 5 prendas que llevan más de 60 días sin usarse.",
   "challenge.kind.second_life": "Temporada de segunda vida",
   "challenge.rule.second_life": "De uno a tres meses comprando solo segunda mano, vintage o intercambio.",
-  "wedge.how": "Ningún modelo que «lo decidió así»: solo una fórmula que se ve de punta a punta.",
   "not.eyebrow": "09 · Con franqueza",
   "not.h": "Lo que Lelia no es.",
   "not.shop.h": "Ni tienda ni escaparate de compras",
@@ -241,9 +240,16 @@
   "weights.occasion": "Ocasión",
   "weights.season": "Temporada",
   "weights.pattern": "Estampado",
-  "weights.note": "Los factores se multiplican, no se suman: uno suspendido arrastra toda la puntuación. Ni un color perfecto salva un plumífero con shorts de lino.",
+  "weights.note": "Ningún modelo que «lo decidió así». Los factores se multiplican, así que uno suspendido arrastra toda la puntuación: ni un color perfecto salva un plumífero con shorts de lino.",
   "challenges.duo.you": "Tú",
   "challenges.duo.friend": "Tu amiga",
   "challenges.duo.youDay": "Día 6 de 10",
-  "challenges.duo.friendDay": "Día 5 de 10"
+  "challenges.duo.friendDay": "Día 5 de 10",
+  "trips.viz.d1": "Vie",
+  "trips.viz.d2": "Sáb",
+  "trips.viz.d3": "Dom",
+  "trips.viz.d4": "Lun",
+  "trips.viz.d5": "Mar",
+  "trips.viz.bag": "5 días, 8 prendas en la maleta. Cada una sirve para varios looks.",
+  "trips.viz.aria": "Viaje de ejemplo de cinco días: el tiempo y un look para cada día, y solo ocho prendas en la maleta que se repiten."
 }

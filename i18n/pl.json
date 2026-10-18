@@ -194,7 +194,6 @@
   "challenge.rule.forgotten": "W dwa tygodnie załóż 5 rzeczy, które leżą nienoszone ponad 60 dni.",
   "challenge.kind.second_life": "Sezon drugiego życia",
   "challenge.rule.second_life": "Od jednego do trzech miesięcy kupujesz tylko second-hand, vintage albo z wymiany.",
-  "wedge.how": "Żadnego modelu, który „tak postanowił” — tylko wzór, który widać na wylot.",
   "not.eyebrow": "09 · Szczerze",
   "not.h": "Czym Lelia nie jest.",
   "not.shop.h": "Nie sklep i nie zakupowy feed",
@@ -241,9 +240,16 @@
   "weights.occasion": "Okazja",
   "weights.season": "Pora roku",
   "weights.pattern": "Wzór",
-  "weights.note": "Składniki się mnożą, a nie dodają: jeden oblany ciągnie w dół całą ocenę. Puchówki z lnianymi szortami nie uratuje nawet idealny kolor.",
+  "weights.note": "Żadnego modelu, który „tak postanowił”. Składniki się mnożą, więc jeden oblany ciągnie w dół całą ocenę: puchówki z lnianymi szortami nie uratuje nawet idealny kolor.",
   "challenges.duo.you": "Ty",
   "challenges.duo.friend": "Przyjaciółka",
   "challenges.duo.youDay": "Dzień 6 z 10",
-  "challenges.duo.friendDay": "Dzień 5 z 10"
+  "challenges.duo.friendDay": "Dzień 5 z 10",
+  "trips.viz.d1": "Pt",
+  "trips.viz.d2": "Sb",
+  "trips.viz.d3": "Nd",
+  "trips.viz.d4": "Pn",
+  "trips.viz.d5": "Wt",
+  "trips.viz.bag": "5 dni — 8 rzeczy w walizce. Każda pracuje w kilku stylizacjach.",
+  "trips.viz.aria": "Przykładowa pięciodniowa podróż: pogoda i stylizacja na każdy dzień, a w walizce tylko osiem rzeczy, które się powtarzają."
 }

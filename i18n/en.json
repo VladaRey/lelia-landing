@@ -194,7 +194,6 @@
   "challenge.rule.forgotten": "Within two weeks, wear 5 pieces that haven’t been worn for 60+ days.",
   "challenge.kind.second_life": "Second-life season",
   "challenge.rule.second_life": "One to three months of buying only second-hand, vintage or swaps.",
-  "wedge.how": "No model that “just decided” — only a formula you can see all the way through.",
   "not.eyebrow": "09 · Being straight with you",
   "not.h": "What Lelia isn’t.",
   "not.shop.h": "Not a shop, not a shopping feed",
@@ -241,9 +240,16 @@
   "weights.occasion": "Occasion",
   "weights.season": "Season",
   "weights.pattern": "Pattern",
-  "weights.note": "The parts are multiplied, not added: one failed part pulls the whole score down. Even a perfect colour can’t rescue a puffer with linen shorts.",
+  "weights.note": "No model that “just decided”. The parts are multiplied, so one failed part pulls the whole score down: even a perfect colour can’t rescue a puffer with linen shorts.",
   "challenges.duo.you": "You",
   "challenges.duo.friend": "Your friend",
   "challenges.duo.youDay": "Day 6 of 10",
-  "challenges.duo.friendDay": "Day 5 of 10"
+  "challenges.duo.friendDay": "Day 5 of 10",
+  "trips.viz.d1": "Fri",
+  "trips.viz.d2": "Sat",
+  "trips.viz.d3": "Sun",
+  "trips.viz.d4": "Mon",
+  "trips.viz.d5": "Tue",
+  "trips.viz.bag": "5 days — 8 pieces in the suitcase. Each one works in several outfits.",
+  "trips.viz.aria": "Example five-day trip: weather and an outfit for each day, and just eight pieces in the suitcase, repeated across days."
 }

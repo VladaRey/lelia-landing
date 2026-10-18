@@ -401,6 +401,19 @@
           <p class="lede" style="margin-top: 1rem">
             {{trips.lede}}
           </p>
+          <figure class="trip" aria-label="{{trips.viz.aria}}">
+            <ol class="trip__days" aria-hidden="true">
+              <li><p class="trip__d">{{trips.viz.d1}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><p class="trip__t">21°</p><div class="trip__fit"><span style="background:#ede6d6"></span><span style="background:#5b7290"></span><span style="background:#f4f1ea"></span></div></li>
+              <li><p class="trip__d">{{trips.viz.d2}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 11a3.5 3.5 0 0 0 1 7z"/></svg><p class="trip__t">17°</p><div class="trip__fit"><span style="background:#6e7451"></span><span style="background:#2f3a56"></span><span style="background:#cdbfa4"></span><span style="background:#6b4a35"></span></div></li>
+              <li><p class="trip__d">{{trips.viz.d3}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 15h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 8a3.5 3.5 0 0 0 1 7z"/><path d="M9 18l-1 3M13 18l-1 3M17 18l-1 3"/></svg><p class="trip__t">14°</p><div class="trip__fit"><span style="background:#6e7451"></span><span style="background:#b5603c"></span><span style="background:#5b7290"></span><span style="background:#6b4a35"></span></div></li>
+              <li><p class="trip__d">{{trips.viz.d4}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><p class="trip__t">20°</p><div class="trip__fit"><span style="background:#ede6d6"></span><span style="background:#cdbfa4"></span><span style="background:#f4f1ea"></span></div></li>
+              <li><p class="trip__d">{{trips.viz.d5}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 11a3.5 3.5 0 0 0 1 7z"/></svg><p class="trip__t">18°</p><div class="trip__fit"><span style="background:#2f3a56"></span><span style="background:#5b7290"></span><span style="background:#f4f1ea"></span></div></li>
+            </ol>
+            <div class="trip__bag">
+              <ul aria-hidden="true"><li><span style="background:#ede6d6"></span><b>×2</b></li><li><span style="background:#5b7290"></span><b>×3</b></li><li><span style="background:#f4f1ea"></span><b>×3</b></li><li><span style="background:#6e7451"></span><b>×2</b></li><li><span style="background:#2f3a56"></span><b>×2</b></li><li><span style="background:#cdbfa4"></span><b>×2</b></li><li><span style="background:#6b4a35"></span><b>×2</b></li><li><span style="background:#b5603c"></span><b>×1</b></li></ul>
+              <figcaption>{{trips.viz.bag}}</figcaption>
+            </div>
+          </figure>
         </div>
 
         <picture>
@@ -446,15 +459,10 @@
                 <li class="reason reason--plus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 12.4l3 3 6-6.3" /></svg><span>{{quote.reason1}}</span></li>
                 <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason2}}</span></li>
               </ul>
+              <p class="reason-card__foot">{{wedge.p}}</p>
             </div>
 
-            <p class="prose">
-              {{wedge.p}}
-            </p>
-            <p class="prose">
-              {{wedge.how}}
-            </p>
-            <figure class="weights">
+            <figure class="weights reason-card reason-card--plain">
               <figcaption class="eyebrow">{{weights.title}}</figcaption>
               <div class="weights__bar" aria-hidden="true">
                 <span class="w1" style="flex: 45"></span><span class="w2" style="flex: 23"></span><span class="w3" style="flex: 20"></span><span class="w4" style="flex: 12"></span>
