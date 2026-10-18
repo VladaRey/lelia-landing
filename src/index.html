@@ -38,7 +38,7 @@
           <a href="#how">{{nav.how}}</a>
           <a href="#challenges">{{nav.challenges}}</a>
           <a href="#why">{{nav.why}}</a>
-          <a href="#limits">{{nav.limits}}</a>
+          <a href="#not">{{nav.limits}}</a>
           {{@langswitch}}
         </nav>
       </div>
@@ -194,36 +194,8 @@
       </div>
     </section>
 
-    <!-- ── 5 · челенджі ──────────────────────────────────────────── -->
-    <section class="section" id="challenges" data-section="challenges" data-order="5">
-      <div class="wrap">
-        <div style="max-width: 43.75rem">
-          <p class="eyebrow">{{challenges.eyebrow}}</p>
-          <h2 class="display h-section">{{challenges.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">{{challenges.lede}}</p>
-        </div>
-
-        <ul class="cards">
-          <li>
-            <h3>{{challenges.ten.h}}</h3>
-            <p class="prose">{{challenges.ten.p}}</p>
-          </li>
-          <li>
-            <h3>{{challenges.capsule.h}}</h3>
-            <p class="prose">{{challenges.capsule.p}}</p>
-          </li>
-          <li>
-            <h3>{{challenges.nobuy.h}}</h3>
-            <p class="prose">{{challenges.nobuy.p}}</p>
-          </li>
-        </ul>
-        <p class="prose cards__more">{{challenges.more}}</p>
-        <p class="prose cards__more">{{challenges.friends}}</p>
-      </div>
-    </section>
-
     <!-- ── 3 · сьогодні: що вдягнути ────────────────────────────── -->
-    <section class="section" data-section="today" data-order="6">
+    <section class="section" data-section="today" data-order="5">
       <div class="wrap">
         <div style="max-width: 43.75rem">
           <p class="eyebrow">{{today.eyebrow}}</p>
@@ -268,8 +240,123 @@
       </div>
     </section>
 
-    <!-- ── 4 · число проти причини ────────────────────────────────── -->
-    <section class="section band" data-section="wedge" data-order="7">
+    <!-- ── 6 · календар ───────────────────────────────────────────── -->
+    <section class="section" data-section="calendar" data-order="6">
+      <div class="wrap calendar">
+        <div class="calendar__text">
+          <p class="eyebrow">{{calendar.eyebrow}}</p>
+          <h2 class="display h-section">{{calendar.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">
+            {{calendar.lede}}
+          </p>
+          <h3>{{calendar.plan.h}}</h3>
+          <p class="prose">
+            {{calendar.plan.p}}
+          </p>
+          <h3>{{calendar.stats.h}}</h3>
+          <p class="prose">
+            {{calendar.stats.p}}
+          </p>
+        </div>
+
+        <picture>
+          <source srcset="{{@base}}assets/shots/plan.webp" type="image/webp" />
+          <img
+            class="shot shot--lift calendar__shot"
+            src="{{@base}}assets/shots/plan.jpg"
+            width="540" height="1169"
+            loading="lazy" decoding="async"
+            alt="{{calendar.alt}}" />
+        </picture>
+      </div>
+    </section>
+
+    <!-- ── 5 · челенджі ──────────────────────────────────────────── -->
+    <section class="section" id="challenges" data-section="challenges" data-order="7">
+      <div class="wrap">
+        <div style="max-width: 43.75rem">
+          <p class="eyebrow">{{challenges.eyebrow}}</p>
+          <h2 class="display h-section">{{challenges.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">{{challenges.lede}}</p>
+        </div>
+
+        <ul class="cards">
+          <li>
+            <h3>{{challenges.ten.h}}</h3>
+            <p class="prose">{{challenges.ten.p}}</p>
+          </li>
+          <li>
+            <h3>{{challenges.capsule.h}}</h3>
+            <p class="prose">{{challenges.capsule.p}}</p>
+          </li>
+          <li>
+            <h3>{{challenges.nobuy.h}}</h3>
+            <p class="prose">{{challenges.nobuy.p}}</p>
+          </li>
+        </ul>
+        <p class="prose cards__more">{{challenges.more}}</p>
+        <p class="prose cards__more">{{challenges.friends}}</p>
+      </div>
+    </section>
+
+    <!-- ── 8 · як почати: сфотографувати речі ──────────────────────── -->
+    <section class="section band" data-section="own" data-order="8">
+      <div class="wrap own">
+        <div>
+          <p class="eyebrow">{{own.eyebrow}}</p>
+          <h2 class="display h-section">{{own.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">
+            {{own.lede}}
+          </p>
+          <h3>{{own.fix.h}}</h3>
+          <p class="prose">
+            {{own.fix.p}}
+          </p>
+          <h3>{{own.first.h}}</h3>
+          <p class="prose">
+            {{own.first.p}}
+          </p>
+        </div>
+
+        <div class="own__shots">
+          <picture>
+            <source srcset="{{@base}}assets/shots/dropper.webp" type="image/webp" />
+            <img
+              class="shot"
+              src="{{@base}}assets/shots/dropper.jpg"
+              width="540" height="1169"
+              loading="lazy" decoding="async"
+              alt="{{own.alt}}" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7 · валіза ─────────────────────────────────────────────── -->
+    <section class="section" data-section="trips" data-order="9">
+      <div class="wrap calendar">
+        <div class="calendar__text">
+          <p class="eyebrow">{{trips.eyebrow}}</p>
+          <h2 class="display h-section">{{trips.h}}</h2>
+          <p class="lede" style="margin-top: 1rem">
+            {{trips.lede}}
+          </p>
+        </div>
+
+        <picture>
+          <source srcset="{{@base}}assets/shots/trip.webp" type="image/webp" />
+          <img
+            class="shot shot--lift calendar__shot"
+            src="{{@base}}assets/shots/trip.jpg"
+            width="540" height="1169"
+            loading="lazy" decoding="async"
+            alt="{{trips.alt}}" />
+        </picture>
+      </div>
+    </section>
+
+    <!-- ── пояснення оцінок ────────────────────────────────── -->
+    <section class="section band" id="why" data-section="wedge" data-order="10">
       <div class="wrap">
         <div style="max-width: 47.5rem">
           <p class="eyebrow">{{wedge.eyebrow}}</p>
@@ -306,6 +393,9 @@
             <p class="prose">
               {{wedge.p}}
             </p>
+            <p class="prose">
+              {{wedge.how}}
+            </p>
           </div>
 
           <picture>
@@ -321,174 +411,37 @@
       </div>
     </section>
 
-    <!-- ── 6 · календар ───────────────────────────────────────────── -->
-    <section class="section" data-section="calendar" data-order="8">
-      <div class="wrap calendar">
-        <div class="calendar__text">
-          <p class="eyebrow">{{calendar.eyebrow}}</p>
-          <h2 class="display h-section">{{calendar.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{calendar.lede}}
-          </p>
-          <h3>{{calendar.plan.h}}</h3>
-          <p class="prose">
-            {{calendar.plan.p}}
-          </p>
-          <h3>{{calendar.stats.h}}</h3>
-          <p class="prose">
-            {{calendar.stats.p}}
-          </p>
-        </div>
-
-        <picture>
-          <source srcset="{{@base}}assets/shots/plan.webp" type="image/webp" />
-          <img
-            class="shot shot--lift calendar__shot"
-            src="{{@base}}assets/shots/plan.jpg"
-            width="540" height="1169"
-            loading="lazy" decoding="async"
-            alt="{{calendar.alt}}" />
-        </picture>
-      </div>
-    </section>
-
-    <!-- ── 7 · валіза ─────────────────────────────────────────────── -->
-    <section class="section band" data-section="trips" data-order="9">
-      <div class="wrap calendar">
-        <div class="calendar__text">
-          <p class="eyebrow">{{trips.eyebrow}}</p>
-          <h2 class="display h-section">{{trips.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{trips.lede}}
-          </p>
-          <h3>{{trips.days.h}}</h3>
-          <p class="prose">
-            {{trips.days.p}}
-          </p>
-          <h3>{{trips.pack.h}}</h3>
-          <p class="prose">
-            {{trips.pack.p}}
-          </p>
-        </div>
-
-        <picture>
-          <source srcset="{{@base}}assets/shots/trip.webp" type="image/webp" />
-          <img
-            class="shot shot--lift calendar__shot"
-            src="{{@base}}assets/shots/trip.jpg"
-            width="540" height="1169"
-            loading="lazy" decoding="async"
-            alt="{{trips.alt}}" />
-        </picture>
-      </div>
-    </section>
-
-
-    <!-- ── 8 · як почати: сфотографувати речі ──────────────────────── -->
-    <section class="section band" data-section="own" data-order="10">
-      <div class="wrap own">
-        <div>
-          <p class="eyebrow">{{own.eyebrow}}</p>
-          <h2 class="display h-section">{{own.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{own.lede}}
-          </p>
-          <h3>{{own.fix.h}}</h3>
-          <p class="prose">
-            {{own.fix.p}}
-          </p>
-          <h3>{{own.first.h}}</h3>
-          <p class="prose">
-            {{own.first.p}}
-          </p>
-        </div>
-
-        <div class="own__shots">
-          <picture>
-            <source srcset="{{@base}}assets/shots/dropper.webp" type="image/webp" />
-            <img
-              class="shot"
-              src="{{@base}}assets/shots/dropper.jpg"
-              width="540" height="1169"
-              loading="lazy" decoding="async"
-              alt="{{own.alt}}" />
-          </picture>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ── 9 · маніфест ───────────────────────────────────────────── -->
-    <section class="section dark manifesto" id="why" data-section="manifesto" data-order="11">
+    <!-- ── чим Lelia не є ─────────────────────────────────────────── -->
+    <section class="section dark manifesto" id="not" data-section="not" data-order="11">
       <div class="wrap">
         <div style="max-width: 51.25rem">
-          <p class="eyebrow">{{manifesto.eyebrow}}</p>
-          <h2 class="display manifesto__title">{{manifesto.h}}</h2>
+          <p class="eyebrow">{{not.eyebrow}}</p>
+          <h2 class="display manifesto__title">{{not.h}}</h2>
         </div>
 
-        <div class="manifesto__body">
-          <p>
-            {{manifesto.p1}}
-          </p>
-          <p>
-            {{manifesto.p2}}
-          </p>
+        <div class="manifesto__cols manifesto__cols--three">
+          <div>
+            <h3>{{not.shop.h}}</h3>
+            <p>{{not.shop.p}}</p>
+          </div>
+          <div>
+            <h3>{{not.ads.h}}</h3>
+            <p>{{not.ads.p}}</p>
+          </div>
+          <div>
+            <h3>{{not.feed.h}}</h3>
+            <p>{{not.feed.p}}</p>
+          </div>
         </div>
 
         <p class="manifesto__coda">
-          {{manifesto.coda}}
+          {{not.coda}}
         </p>
       </div>
     </section>
 
-    <!-- ── 10 · чого не робить ────────────────────────────────────── -->
-    <section class="section" id="limits" data-section="limits" data-order="12">
-      <div class="wrap">
-        <div style="max-width: 43.75rem">
-          <p class="eyebrow">{{limits.eyebrow}}</p>
-          <h2 class="display h-section">{{limits.h}}</h2>
-        </div>
-
-        <div class="limits__grid">
-          <picture>
-            <source srcset="{{@base}}assets/shots/shoot.webp" type="image/webp" />
-            <img
-              class="shot"
-              src="{{@base}}assets/shots/shoot.jpg"
-              width="540" height="1169"
-              loading="lazy" decoding="async"
-              alt="{{shoot.alt}}" />
-          </picture>
-          <picture>
-            <source srcset="{{@base}}assets/shots/card.webp" type="image/webp" />
-            <img
-              class="shot"
-              src="{{@base}}assets/shots/card.jpg"
-              width="540" height="1169"
-              loading="lazy" decoding="async"
-              alt="{{card.alt}}" />
-          </picture>
-
-          <ul class="limits">
-            <li>
-              <h3>{{limits.recognise.h}}</h3>
-              <p>{{limits.recognise.p}}</p>
-            </li>
-            <li>
-              <h3>{{limits.fit.h}}</h3>
-              <p>{{limits.fit.p}}</p>
-            </li>
-            <li>
-              <h3>{{limits.device.h}}</h3>
-              <p>{{limits.device.p}}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <!-- ── 11 · питання ───────────────────────────────────────────── -->
-    <section class="section band" data-section="faq" data-order="13">
+    <section class="section band" data-section="faq" data-order="12">
       <div class="wrap faq">
         <div>
           <p class="eyebrow">{{faq.eyebrow}}</p>
@@ -496,6 +449,18 @@
         </div>
 
         <div class="faq__list">
+          <div>
+            <h3>{{faq.anyway.q}}</h3>
+            <p class="prose">
+              {{faq.anyway.a}}
+            </p>
+          </div>
+          <div>
+            <h3>{{faq.saved.q}}</h3>
+            <p class="prose">
+              {{faq.saved.a}}
+            </p>
+          </div>
           <div>
             <h3>{{faq.cost.q}}</h3>
             <p class="prose">
@@ -533,6 +498,18 @@
             </p>
           </div>
           <div>
+            <h3>{{faq.cant.q}}</h3>
+            <p class="prose">
+              {{faq.cant.a}}
+            </p>
+          </div>
+          <div>
+            <h3>{{faq.device.q}}</h3>
+            <p class="prose">
+              {{faq.device.a}}
+            </p>
+          </div>
+          <div>
             <h3>{{faq.where.q}}</h3>
             <p class="prose">
               {{faq.where.a}}
@@ -543,7 +520,7 @@
     </section>
 
     <!-- ── 12 · фінальний заклик ──────────────────────────────────── -->
-    <section class="section finale" id="get" data-section="finale" data-order="14">
+    <section class="section finale" id="get" data-section="finale" data-order="13">
       <div class="wrap">
         <div class="finale__inner">
           <h2 class="display">{{finale.h}}</h2>
