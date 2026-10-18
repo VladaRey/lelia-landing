@@ -325,20 +325,37 @@
 
         <ul class="cards">
           <li>
+            <div class="ch__viz ch__viz--ten" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--today"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
             <h3>{{challenges.ten.h}}</h3>
             <p class="prose">{{challenges.ten.p}}</p>
           </li>
           <li>
+            <div class="ch__viz ch__viz--cap" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span></div>
             <h3>{{challenges.capsule.h}}</h3>
             <p class="prose">{{challenges.capsule.p}}</p>
           </li>
           <li>
+            <div class="ch__viz ch__viz--nob" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--today"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
             <h3>{{challenges.nobuy.h}}</h3>
             <p class="prose">{{challenges.nobuy.p}}</p>
           </li>
         </ul>
         <p class="prose cards__more">{{challenges.more}}</p>
-        <p class="prose cards__more">{{challenges.friends}}</p>
+        <div class="duo">
+          <div class="duo__cards" aria-hidden="true">
+            <div class="duo__card">
+              <p class="duo__who">{{challenges.duo.you}}</p>
+              <p class="duo__day">{{challenges.duo.youDay}}</p>
+              <div class="ch__viz ch__viz--ten"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
+            </div>
+            <div class="duo__card duo__card--friend">
+              <p class="duo__who">{{challenges.duo.friend}}</p>
+              <p class="duo__day">{{challenges.duo.friendDay}}</p>
+              <div class="ch__viz ch__viz--ten"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
+            </div>
+          </div>
+          <p class="prose">{{challenges.friends}}</p>
+        </div>
       </div>
     </section>
 

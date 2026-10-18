@@ -1481,3 +1481,46 @@ a:hover { color: var(--accent-hover); }
 .weights__legend b { color: var(--ink); font-variant-numeric: tabular-nums; }
 .weights__legend .key { width: 0.75rem; height: 0.75rem; border-radius: 3px; flex: none; }
 .weights__note { color: var(--prose); font-size: 0.9375rem; line-height: 1.6; margin-top: 0.875rem; }
+
+/* ── челенджі: міні-схема кожного правила ───────────────────────────
+   Клітинки — ті самі, що в картці челенджу в застосунку: зроблені дні
+   березою, сьогодні — обведений, решта — порожні. */
+.ch__viz { display: grid; gap: 4px; margin-bottom: 1rem; }
+.ch__c { display: block; aspect-ratio: 1; border-radius: 4px; }
+.ch__c--done { background: var(--accent); }
+.ch__c--today { background: var(--surface); box-shadow: inset 0 0 0 2px var(--accent-ink); }
+.ch__c--rest { background: var(--paper-band); }
+.ch__c--off { background: transparent; box-shadow: inset 0 0 0 1px var(--rule-faq); }
+.ch__viz--ten { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+.ch__viz--ten .ch__c { aspect-ratio: 3 / 4; border-radius: 6px; }
+.ch__viz--cap { grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 3px; }
+.ch__viz--cap .ch__c { border-radius: 50%; }
+.ch__viz--nob { grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 3px; }
+.ch__viz--nob .ch__c { aspect-ratio: 1; border-radius: 3px; }
+
+.duo {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.duo__cards { display: flex; gap: 0.75rem; }
+.duo__card {
+  flex: 1;
+  max-width: 13rem;
+  background: var(--surface);
+  border: 1px solid var(--rule-card);
+  border-radius: 1rem;
+  padding: 0.875rem 1rem 0.25rem;
+  transform: rotate(-2deg);
+}
+.duo__card--friend { background: #e9b8b8; border-color: #e9b8b8; transform: rotate(2deg) translateY(0.5rem); }
+.duo__card--friend .ch__c--rest { background: rgba(255, 253, 248, 0.6); }
+.duo__who { font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.duo__card--friend .duo__who { color: var(--ink); }
+.duo__day { font-weight: 700; font-size: 1.25rem; color: var(--ink); margin: 0.125rem 0 0.625rem; }
+.duo .prose { max-width: 36rem; }
+
+@media (min-width: 48rem) {
+  .duo { grid-template-columns: minmax(0, 26rem) minmax(0, 1fr); gap: 2.5rem; }
+}
