@@ -105,64 +105,22 @@
     <!-- ── 3 · у магазині: головна дія ─────────────────────────── -->
     <section class="section" id="how" data-section="shop" data-order="3">
       <div class="wrap">
-        <div style="max-width: 45rem">
+        <div class="sec-head">
           <p class="eyebrow">{{shop.eyebrow}}</p>
-          <h2 class="display h-wide">{{shop.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{shop.lede}}
-          </p>
+          <h2 class="display h-section">{{shop.h}}</h2>
+          <p class="lede">{{shop.lede}}</p>
         </div>
 
-        <div class="shop__grid">
-          <picture>
-            <source srcset="{{@base}}assets/shots/fitcolor.webp" type="image/webp" />
-            <img
-              class="shot"
-              src="{{@base}}assets/shots/fitcolor.jpg"
-              width="540" height="1169"
-              loading="lazy" decoding="async"
-              alt="{{fitcolor.alt}}" />
-          </picture>
+        <div class="split split--shop">
           <picture>
             <source srcset="{{@base}}assets/shots/verdict.webp" type="image/webp" />
-            <img
-              class="shot"
-              src="{{@base}}assets/shots/verdict.jpg"
-              width="540" height="1169"
-              loading="lazy" decoding="async"
-              alt="{{verdict.alt}}" />
+            <img class="shot shot--lift" src="{{@base}}assets/shots/verdict.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{verdict.alt}}" />
           </picture>
-
-          <div class="shop__notes">
-            <div>
-              <h3>{{shop.note1.h}}</h3>
-              <p class="prose">
-                {{shop.note1.p}}
-              </p>
-            </div>
-            <div>
-              <h3>{{shop.note2.h}}</h3>
-              <p class="prose">
-                {{shop.note2.p}}
-              </p>
-            </div>
-            <div>
-              <h3>{{shop.note4.h}}</h3>
-              <p class="prose">
-                {{shop.note4.p}}
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Інфографіка: шлях рішення в магазині. Вердикт веде лише до двох
-             кнопок; «Не купую» з'являється пізніше, у вкладці «Перевірка». -->
-        <div class="flow" role="group" aria-label="{{flow.aria}}">
+          <div class="flow" role="group" aria-label="{{flow.aria}}">
           <ol class="flow__steps">
             <li><span class="flow__n">1</span><h3>{{flow.s1.h}}</h3><p>{{flow.s1.p}}</p></li>
             <li><span class="flow__n">2</span><h3>{{flow.s2.h}}</h3><p>{{flow.s2.p}}</p></li>
-            <li><span class="flow__n">3</span><h3>{{flow.s3.h}}</h3><p>{{flow.s3.p}}</p></li>
+            <li><span class="flow__n">3</span><h3>{{flow.s3.h}}</h3><p>{{flow.s3.p}}</p><ul class="flow__chips"><li>{{flow.s3.c1}}</li><li>{{flow.s3.c2}}</li><li>{{flow.s3.c3}}</li><li>{{flow.s3.c4}}</li></ul></li>
           </ol>
           <div class="flow__branches">
             <div class="flow__branch">
@@ -179,33 +137,23 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- ── 4 · ціна за вихід ─────────────────────────────────────── -->
     <section class="section band" data-section="cost" data-order="4">
-      <div class="wrap cost">
-        <div style="max-width: 43.75rem">
+      <div class="wrap">
+        <div class="sec-head">
           <p class="eyebrow">{{cost.eyebrow}}</p>
           <h2 class="display h-section">{{cost.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">{{cost.lede}}</p>
+          <p class="lede">{{cost.lede}}</p>
         </div>
-
-        <div class="cost__pair">
-          <div class="cost__item">
-            <h3>{{cost.a.name}}</h3>
-            <p class="cost__formula">{{cost.a.formula}}</p>
-            <p class="cost__result">{{cost.a.result}}</p>
-          </div>
-          <div class="cost__item cost__item--win">
-            <h3>{{cost.b.name}}</h3>
-            <p class="cost__formula">{{cost.b.formula}}</p>
-            <p class="cost__result">{{cost.b.result}}</p>
-          </div>
-        </div>
-
         <figure class="cost__chart">
-          <figcaption class="cost__chart-title">{{cost.chart.title}}</figcaption>
+          <ul class="cost__legend">
+            <li class="cost__key cost__key--trend"><p class="cost__big">{{cost.a.result}}</p><p>{{cost.chart.trend}}</p></li>
+            <li class="cost__key cost__key--simple"><p class="cost__big">{{cost.b.result}}</p><p>{{cost.chart.simple}}</p></li>
+          </ul>
           <svg viewBox="0 0 640 276" role="img" aria-label="{{cost.chart.aria}}" focusable="false">
             <line class="axis" x1="56" y1="236" x2="616" y2="236" />
             <line class="axis" x1="56" y1="24" x2="56" y2="236" />
@@ -217,81 +165,52 @@
             <circle class="dot dot--simple" cx="616.0" cy="224.2" r="7" />
             <g class="ticks"><text x="56.0" y="262" text-anchor="middle">1</text><text x="141.4" y="262" text-anchor="middle">10</text><text x="236.3" y="262" text-anchor="middle">20</text><text x="331.3" y="262" text-anchor="middle">30</text><text x="426.2" y="262" text-anchor="middle">40</text><text x="521.1" y="262" text-anchor="middle">50</text><text x="616.0" y="262" text-anchor="middle">60</text></g>
           </svg>
-          <ul class="cost__legend">
-            <li><span class="key key--trend"></span>{{cost.chart.trend}}</li>
-            <li><span class="key key--simple"></span>{{cost.chart.simple}}</li>
-            <li><span class="key key--cross"></span>{{cost.chart.cross}}</li>
-          </ul>
-          <p class="cost__axis">{{cost.chart.x}}</p>
+          <p class="cost__axis"><span class="key key--cross"></span>{{cost.chart.cross}}<span class="cost__x">{{cost.chart.x}}</span></p>
         </figure>
-        <p class="prose cost__note">{{cost.note}}</p>
+        <p class="sec-foot">{{cost.note}}</p>
       </div>
     </section>
 
     <!-- ── 3 · сьогодні: що вдягнути ────────────────────────────── -->
     <section class="section" data-section="today" data-order="5">
       <div class="wrap">
-        <div style="max-width: 43.75rem">
+        <div class="sec-head">
           <p class="eyebrow">{{today.eyebrow}}</p>
           <h2 class="display h-section">{{today.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{today.lede}}
-          </p>
+          <p class="lede">{{today.lede}}</p>
         </div>
 
         <div class="ask">
-          <div>
+          <figure>
             <picture>
-              <source srcset="{{@base}}assets/shots/outfits.webp" type="image/webp" />
-              <img
-                class="shot"
-                src="{{@base}}assets/shots/outfits.jpg"
-                width="540" height="1169"
-                loading="lazy" decoding="async"
-                alt="{{outfits.alt}}" />
-            </picture>
-            <h3>{{today.picks.h}}</h3>
-            <p class="prose">
-              {{today.picks.p}}
-            </p>
-          </div>
-          <div>
+            <source srcset="{{@base}}assets/shots/outfits.webp" type="image/webp" />
+            <img class="shot" src="{{@base}}assets/shots/outfits.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{outfits.alt}}" />
+          </picture>
+            <figcaption><b>{{today.picks.h}}</b> {{today.picks.p}}</figcaption>
+          </figure>
+          <figure>
             <picture>
-              <source srcset="{{@base}}assets/shots/builder.webp" type="image/webp" />
-              <img
-                class="shot"
-                src="{{@base}}assets/shots/builder.jpg"
-                width="540" height="1169"
-                loading="lazy" decoding="async"
-                alt="{{builder.alt}}" />
-            </picture>
-            <h3>{{today.build.h}}</h3>
-            <p class="prose">
-              {{today.build.p}}
-            </p>
-          </div>
+            <source srcset="{{@base}}assets/shots/builder.webp" type="image/webp" />
+            <img class="shot" src="{{@base}}assets/shots/builder.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{builder.alt}}" />
+          </picture>
+            <figcaption><b>{{today.build.h}}</b> {{today.build.p}}</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- ── 6 · календар ───────────────────────────────────────────── -->
     <section class="section" data-section="calendar" data-order="6">
-      <div class="wrap calendar">
-        <div class="calendar__text">
+      <div class="wrap">
+        <div class="sec-head">
           <p class="eyebrow">{{calendar.eyebrow}}</p>
           <h2 class="display h-section">{{calendar.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{calendar.lede}}
-          </p>
-          <h3>{{calendar.plan.h}}</h3>
-          <p class="prose">
-            {{calendar.plan.p}}
-          </p>
-          <h3>{{calendar.stats.h}}</h3>
-          <p class="prose">
-            {{calendar.stats.p}}
-          </p>
-          <figure class="dots" aria-label="{{dots.aria}}">
+          <p class="lede">{{calendar.lede}}</p>
+        </div>
+
+        <div class="split split--calendar">
+          <figure class="dots dots--card" aria-label="{{dots.aria}}">
+            <p class="dots__title">{{calendar.stats.h}}</p>
             <div class="dots__grid" aria-hidden="true"><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--once"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--once"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--once"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--once"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--often"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--once"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span><span class="dots__d dots__d--idle"></span></div>
             <ul class="dots__legend">
               <li><span class="dots__d dots__d--often"></span>{{dots.often}}</li>
@@ -300,29 +219,22 @@
             </ul>
             <figcaption>{{dots.caption}}</figcaption>
           </figure>
+          <picture>
+            <source srcset="{{@base}}assets/shots/plan.webp" type="image/webp" />
+            <img class="shot shot--lift" src="{{@base}}assets/shots/plan.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{calendar.alt}}" />
+          </picture>
         </div>
-
-        <picture>
-          <source srcset="{{@base}}assets/shots/plan.webp" type="image/webp" />
-          <img
-            class="shot shot--lift calendar__shot"
-            src="{{@base}}assets/shots/plan.jpg"
-            width="540" height="1169"
-            loading="lazy" decoding="async"
-            alt="{{calendar.alt}}" />
-        </picture>
       </div>
     </section>
 
     <!-- ── 5 · челенджі ──────────────────────────────────────────── -->
     <section class="section" id="challenges" data-section="challenges" data-order="7">
       <div class="wrap">
-        <div style="max-width: 43.75rem">
+        <div class="sec-head">
           <p class="eyebrow">{{challenges.eyebrow}}</p>
           <h2 class="display h-section">{{challenges.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">{{challenges.lede}}</p>
+          <p class="lede">{{challenges.lede}}</p>
         </div>
-
         <ul class="cards">
           <li>
             <div class="ch__viz ch__viz--ten" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--today"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
@@ -340,7 +252,7 @@
             <p class="prose">{{challenges.nobuy.p}}</p>
           </li>
         </ul>
-        <p class="prose cards__more">{{challenges.more}}</p>
+        <p class="more-chips"><span>{{challenges.more.label}}</span> <span class="chip">{{challenges.more.c1}}</span> <span class="chip">{{challenges.more.c2}}</span> <span class="chip">{{challenges.more.c3}}</span></p>
         <div class="duo">
           <div class="duo__cards" aria-hidden="true">
             <div class="duo__card">
@@ -361,32 +273,24 @@
 
     <!-- ── 8 · як почати: сфотографувати речі ──────────────────────── -->
     <section class="section band" data-section="own" data-order="8">
-      <div class="wrap own">
-        <div>
+      <div class="wrap">
+        <div class="sec-head">
           <p class="eyebrow">{{own.eyebrow}}</p>
           <h2 class="display h-section">{{own.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{own.lede}}
-          </p>
-          <h3>{{own.fix.h}}</h3>
-          <p class="prose">
-            {{own.fix.p}}
-          </p>
-          <h3>{{own.first.h}}</h3>
-          <p class="prose">
-            {{own.first.p}}
-          </p>
         </div>
 
-        <div class="own__shots">
+        <div class="split split--own">
+          <div>
+            <ol class="steps">
+              <li><h3>{{own.s1.h}}</h3><p>{{own.s1.p}}</p></li>
+              <li><h3>{{own.s2.h}}</h3><p>{{own.s2.p}}</p></li>
+              <li><h3>{{own.s3.h}}</h3><p>{{own.s3.p}}</p></li>
+            </ol>
+            <p class="sec-foot">{{own.first.p}}</p>
+          </div>
           <picture>
             <source srcset="{{@base}}assets/shots/dropper.webp" type="image/webp" />
-            <img
-              class="shot"
-              src="{{@base}}assets/shots/dropper.jpg"
-              width="540" height="1169"
-              loading="lazy" decoding="async"
-              alt="{{own.alt}}" />
+            <img class="shot shot--lift" src="{{@base}}assets/shots/dropper.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{own.alt}}" />
           </picture>
         </div>
       </div>
