@@ -171,36 +171,8 @@
       </div>
     </section>
 
-    <!-- ── 3 · сьогодні: що вдягнути ────────────────────────────── -->
-    <section class="section" data-section="today" data-order="5">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">{{today.eyebrow}}</p>
-          <h2 class="display h-section">{{today.h}}</h2>
-          <p class="lede">{{today.lede}}</p>
-        </div>
-
-        <div class="ask">
-          <figure>
-            <picture>
-            <source srcset="{{@base}}assets/shots/outfits.webp" type="image/webp" />
-            <img class="shot" src="{{@base}}assets/shots/outfits.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{outfits.alt}}" />
-          </picture>
-            <figcaption><b>{{today.picks.h}}</b> {{today.picks.p}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-            <source srcset="{{@base}}assets/shots/builder.webp" type="image/webp" />
-            <img class="shot" src="{{@base}}assets/shots/builder.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{builder.alt}}" />
-          </picture>
-            <figcaption><b>{{today.build.h}}</b> {{today.build.p}}</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 6 · календар ───────────────────────────────────────────── -->
-    <section class="section" data-section="calendar" data-order="6">
+    <!-- ── 3 · розбір шафи ───────────────────────────────────────────── -->
+    <section class="section" data-section="calendar" data-order="5">
       <div class="wrap">
         <div class="sec-head">
           <p class="eyebrow">{{calendar.eyebrow}}</p>
@@ -227,8 +199,61 @@
       </div>
     </section>
 
+    <!-- ── 4 · як почати: сфотографувати речі ──────────────────────── -->
+    <section class="section band" data-section="own" data-order="6">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">{{own.eyebrow}}</p>
+          <h2 class="display h-section">{{own.h}}</h2>
+        </div>
+
+        <div class="split split--own">
+          <div>
+            <ol class="steps">
+              <li><h3>{{own.s1.h}}</h3><p>{{own.s1.p}}</p></li>
+              <li><h3>{{own.s2.h}}</h3><p>{{own.s2.p}}</p></li>
+              <li><h3>{{own.s3.h}}</h3><p>{{own.s3.p}}</p></li>
+            </ol>
+            <p class="sec-foot">{{own.first.p}}</p>
+          </div>
+          <picture>
+            <source srcset="{{@base}}assets/shots/dropper.webp" type="image/webp" />
+            <img class="shot shot--lift" src="{{@base}}assets/shots/dropper.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{own.alt}}" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5 · сьогодні: що вдягнути ────────────────────────────── -->
+    <section class="section" data-section="today" data-order="7">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">{{today.eyebrow}}</p>
+          <h2 class="display h-section">{{today.h}}</h2>
+          <p class="lede">{{today.lede}}</p>
+        </div>
+
+        <div class="ask">
+          <figure>
+            <picture>
+            <source srcset="{{@base}}assets/shots/outfits.webp" type="image/webp" />
+            <img class="shot" src="{{@base}}assets/shots/outfits.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{outfits.alt}}" />
+          </picture>
+            <figcaption><b>{{today.picks.h}}</b> {{today.picks.p}}</figcaption>
+          </figure>
+          <figure>
+            <picture>
+            <source srcset="{{@base}}assets/shots/builder.webp" type="image/webp" />
+            <img class="shot" src="{{@base}}assets/shots/builder.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{builder.alt}}" />
+          </picture>
+            <figcaption><b>{{today.build.h}}</b> {{today.build.p}}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- ── 5 · челенджі ──────────────────────────────────────────── -->
-    <section class="section" id="challenges" data-section="challenges" data-order="7">
+    <section class="section" id="challenges" data-section="challenges" data-order="8">
       <div class="wrap">
         <div class="sec-head">
           <p class="eyebrow">{{challenges.eyebrow}}</p>
@@ -267,31 +292,6 @@
             </div>
           </div>
           <p class="prose">{{challenges.friends}}</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 8 · як почати: сфотографувати речі ──────────────────────── -->
-    <section class="section band" data-section="own" data-order="8">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">{{own.eyebrow}}</p>
-          <h2 class="display h-section">{{own.h}}</h2>
-        </div>
-
-        <div class="split split--own">
-          <div>
-            <ol class="steps">
-              <li><h3>{{own.s1.h}}</h3><p>{{own.s1.p}}</p></li>
-              <li><h3>{{own.s2.h}}</h3><p>{{own.s2.p}}</p></li>
-              <li><h3>{{own.s3.h}}</h3><p>{{own.s3.p}}</p></li>
-            </ol>
-            <p class="sec-foot">{{own.first.p}}</p>
-          </div>
-          <picture>
-            <source srcset="{{@base}}assets/shots/dropper.webp" type="image/webp" />
-            <img class="shot shot--lift" src="{{@base}}assets/shots/dropper.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{own.alt}}" />
-          </picture>
         </div>
       </div>
     </section>
