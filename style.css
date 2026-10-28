@@ -1697,3 +1697,35 @@ a:hover { color: var(--accent-hover); }
 @media (max-width: 63.99rem) {
   .split--shop .flow { order: -1; }
 }
+
+/* ── історія: чому з'явилася Lelia ─────────────────────────────── */
+.story__inner { max-width: 47.5rem; }
+.story__quote {
+  border-left: 3px solid var(--accent);
+  margin: 1.75rem 0 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+}
+.story__quote p {
+  color: var(--prose);
+  font-size: clamp(1.0625rem, 0.98rem + 0.35vw, 1.25rem);
+  line-height: 1.6;
+  margin: 0;
+}
+.story__quote p + p { margin-top: 1rem; }
+.story__sign {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+}
+
+/* ── 05 · і ще: чотири картки з маленьким малюнком над кожною ─────── */
+.more .ch__viz { max-width: 12rem; height: auto; min-height: 2.25rem; align-content: end; }
+.more__viz { display: flex; gap: 6px; margin-bottom: 1rem; min-height: 2.25rem; align-items: flex-end; }
+.more__viz span { display: block; box-shadow: inset 0 0 0 1px rgba(43, 39, 36, 0.08); }
+.more__viz--outfit span { width: 1.75rem; height: 2.25rem; border-radius: 6px; }
+.more__viz--outfit span:nth-child(2) { height: 2rem; }
+.more__viz--outfit span:nth-child(3) { height: 1.125rem; }
+.more__viz--bag span { width: 1rem; height: 1rem; border-radius: 4px; }
+.more__viz--palette span { width: 1.5rem; height: 1.5rem; border-radius: 50%; margin-left: -4px; box-shadow: 0 0 0 2px #fffdf8; }
+.more__viz--palette span:first-child { margin-left: 0; }

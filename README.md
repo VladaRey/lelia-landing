@@ -80,6 +80,14 @@ three axes the app names. `wedge.p` beside them must use the same words for
 those axes as the quotes do — temperature, saturation, lightness — or the
 page contradicts the app two lines below its own claim.
 
+**Structure since the 1.4 positioning («Fewer clothes. Every one a favourite.»).**
+Three main themes carry the page — 01 in the shop, 02 cost per wear, 03 the
+closet review — then 04 how to start and a single 05 «And more» card row for
+today’s outfit, challenges, trips and colour type (they used to be three
+sections of their own). A short founder story (`story.*`) sits right after the
+trust strip; `story.sign` is the author’s name and must stay her own words.
+All copy is gender-neutral except that story, which is one person speaking.
+
 To add a language: add its code to `LANGS` in `build.js`, put its endonym in
 `LANG_NAMES` beside it, and drop `i18n/<code>.json` next to the others. The
 folder, the `hreflang` links and the switcher all follow from that — nothing

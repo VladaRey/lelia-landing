@@ -36,7 +36,7 @@
         </a>
         <nav class="nav__links" aria-label="{{nav.aria}}">
           <a href="#how">{{nav.how}}</a>
-          <a href="#challenges">{{nav.challenges}}</a>
+          <a href="#more">{{nav.more}}</a>
           <a href="#why">{{nav.why}}</a>
           <a href="#not">{{nav.limits}}</a>
           {{@langswitch}}
@@ -102,8 +102,21 @@
       </dl>
     </section>
 
+    <!-- ── чому з'явилася Lelia: історія авторки ─────────────────── -->
+    <section class="section story" data-section="story" data-order="3">
+      <div class="wrap story__inner">
+        <p class="eyebrow">{{story.eyebrow}}</p>
+        <h2 class="display h-section">{{story.h}}</h2>
+        <blockquote class="story__quote">
+          <p>{{story.p1}}</p>
+          <p>{{story.p2}}</p>
+          <footer class="story__sign">{{story.sign}}</footer>
+        </blockquote>
+      </div>
+    </section>
+
     <!-- ── 3 · у магазині: головна дія ─────────────────────────── -->
-    <section class="section" id="how" data-section="shop" data-order="3">
+    <section class="section" id="how" data-section="shop" data-order="4">
       <div class="wrap">
         <div class="sec-head">
           <p class="eyebrow">{{shop.eyebrow}}</p>
@@ -142,7 +155,7 @@
     </section>
 
     <!-- ── 4 · ціна за вихід ─────────────────────────────────────── -->
-    <section class="section band" data-section="cost" data-order="4">
+    <section class="section band" data-section="cost" data-order="5">
       <div class="wrap">
         <div class="sec-head">
           <p class="eyebrow">{{cost.eyebrow}}</p>
@@ -171,8 +184,8 @@
       </div>
     </section>
 
-    <!-- ── 3 · розбір шафи ───────────────────────────────────────────── -->
-    <section class="section" data-section="calendar" data-order="5">
+    <!-- ── 03 · розбір шафи ───────────────────────────────────────────── -->
+    <section class="section" data-section="calendar" data-order="6">
       <div class="wrap">
         <div class="sec-head">
           <p class="eyebrow">{{calendar.eyebrow}}</p>
@@ -199,8 +212,8 @@
       </div>
     </section>
 
-    <!-- ── 4 · як почати: сфотографувати речі ──────────────────────── -->
-    <section class="section band" data-section="own" data-order="6">
+    <!-- ── 04 · як почати: сфотографувати речі ──────────────────────── -->
+    <section class="section band" data-section="own" data-order="7">
       <div class="wrap">
         <div class="sec-head">
           <p class="eyebrow">{{own.eyebrow}}</p>
@@ -224,116 +237,40 @@
       </div>
     </section>
 
-    <!-- ── 5 · сьогодні: що вдягнути ────────────────────────────── -->
-    <section class="section" data-section="today" data-order="7">
+    <!-- ── 5 · і ще: усе, що допомагає носити своє ───────────────── -->
+    <section class="section" id="more" data-section="more" data-order="8">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow">{{today.eyebrow}}</p>
-          <h2 class="display h-section">{{today.h}}</h2>
-          <p class="lede">{{today.lede}}</p>
+          <p class="eyebrow">{{more.eyebrow}}</p>
+          <h2 class="display h-section">{{more.h}}</h2>
         </div>
-
-        <div class="ask">
-          <figure>
-            <picture>
-            <source srcset="{{@base}}assets/shots/outfits.webp" type="image/webp" />
-            <img class="shot" src="{{@base}}assets/shots/outfits.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{outfits.alt}}" />
-          </picture>
-            <figcaption><b>{{today.picks.h}}</b> {{today.picks.p}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-            <source srcset="{{@base}}assets/shots/builder.webp" type="image/webp" />
-            <img class="shot" src="{{@base}}assets/shots/builder.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{builder.alt}}" />
-          </picture>
-            <figcaption><b>{{today.build.h}}</b> {{today.build.p}}</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 5 · челенджі ──────────────────────────────────────────── -->
-    <section class="section" id="challenges" data-section="challenges" data-order="8">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">{{challenges.eyebrow}}</p>
-          <h2 class="display h-section">{{challenges.h}}</h2>
-          <p class="lede">{{challenges.lede}}</p>
-        </div>
-        <ul class="cards">
+        <ul class="cards more">
+          <li>
+            <div class="more__viz more__viz--outfit" aria-hidden="true"><span style="background:#ede6d6"></span><span style="background:#5b7290"></span><span style="background:#6b4a35"></span></div>
+            <h3>{{more.today.h}}</h3>
+            <p class="prose">{{more.today.p}}</p>
+          </li>
           <li>
             <div class="ch__viz ch__viz--ten" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--today"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
-            <h3>{{challenges.ten.h}}</h3>
-            <p class="prose">{{challenges.ten.p}}</p>
+            <h3>{{more.challenges.h}}</h3>
+            <p class="prose">{{more.challenges.p}}</p>
           </li>
           <li>
-            <div class="ch__viz ch__viz--cap" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span><span class="ch__c ch__c--off"></span></div>
-            <h3>{{challenges.capsule.h}}</h3>
-            <p class="prose">{{challenges.capsule.p}}</p>
+            <div class="more__viz more__viz--bag" aria-hidden="true"><span style="background:#ede6d6"></span><span style="background:#5b7290"></span><span style="background:#f4f1ea"></span><span style="background:#6e7451"></span><span style="background:#2f3a56"></span><span style="background:#cdbfa4"></span></div>
+            <h3>{{more.trips.h}}</h3>
+            <p class="prose">{{more.trips.p}}</p>
           </li>
           <li>
-            <div class="ch__viz ch__viz--nob" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--today"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
-            <h3>{{challenges.nobuy.h}}</h3>
-            <p class="prose">{{challenges.nobuy.p}}</p>
+            <div class="more__viz more__viz--palette" aria-hidden="true"><span style="background:#b5606c"></span><span style="background:#c98c8c"></span><span style="background:#5e7a3e"></span><span style="background:#3e5a8c"></span><span style="background:#cdbfa4"></span></div>
+            <h3>{{more.colors.h}}</h3>
+            <p class="prose">{{more.colors.p}}</p>
           </li>
         </ul>
-        <p class="more-chips"><span>{{challenges.more.label}}</span> <span class="chip">{{challenges.more.c1}}</span> <span class="chip">{{challenges.more.c2}}</span> <span class="chip">{{challenges.more.c3}}</span></p>
-        <div class="duo">
-          <div class="duo__cards" aria-hidden="true">
-            <div class="duo__card">
-              <p class="duo__who">{{challenges.duo.you}}</p>
-              <p class="duo__day">{{challenges.duo.youDay}}</p>
-              <div class="ch__viz ch__viz--ten"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
-            </div>
-            <div class="duo__card duo__card--friend">
-              <p class="duo__who">{{challenges.duo.friend}}</p>
-              <p class="duo__day">{{challenges.duo.friendDay}}</p>
-              <div class="ch__viz ch__viz--ten"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
-            </div>
-          </div>
-          <p class="prose">{{challenges.friends}}</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 7 · валіза ─────────────────────────────────────────────── -->
-    <section class="section" data-section="trips" data-order="9">
-      <div class="wrap calendar">
-        <div class="calendar__text">
-          <p class="eyebrow">{{trips.eyebrow}}</p>
-          <h2 class="display h-section">{{trips.h}}</h2>
-          <p class="lede" style="margin-top: 1rem">
-            {{trips.lede}}
-          </p>
-          <figure class="trip" aria-label="{{trips.viz.aria}}">
-            <ol class="trip__days" aria-hidden="true">
-              <li><p class="trip__d">{{trips.viz.d1}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><p class="trip__t">21°</p><div class="trip__fit"><span style="background:#ede6d6"></span><span style="background:#5b7290"></span><span style="background:#f4f1ea"></span></div></li>
-              <li><p class="trip__d">{{trips.viz.d2}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 11a3.5 3.5 0 0 0 1 7z"/></svg><p class="trip__t">17°</p><div class="trip__fit"><span style="background:#6e7451"></span><span style="background:#2f3a56"></span><span style="background:#cdbfa4"></span><span style="background:#6b4a35"></span></div></li>
-              <li><p class="trip__d">{{trips.viz.d3}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 15h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 8a3.5 3.5 0 0 0 1 7z"/><path d="M9 18l-1 3M13 18l-1 3M17 18l-1 3"/></svg><p class="trip__t">14°</p><div class="trip__fit"><span style="background:#6e7451"></span><span style="background:#b5603c"></span><span style="background:#5b7290"></span><span style="background:#6b4a35"></span></div></li>
-              <li><p class="trip__d">{{trips.viz.d4}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><p class="trip__t">20°</p><div class="trip__fit"><span style="background:#ede6d6"></span><span style="background:#cdbfa4"></span><span style="background:#f4f1ea"></span></div></li>
-              <li><p class="trip__d">{{trips.viz.d5}}</p><svg class="trip__w" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 11a3.5 3.5 0 0 0 1 7z"/></svg><p class="trip__t">18°</p><div class="trip__fit"><span style="background:#2f3a56"></span><span style="background:#5b7290"></span><span style="background:#f4f1ea"></span></div></li>
-            </ol>
-            <div class="trip__bag">
-              <ul aria-hidden="true"><li><span style="background:#ede6d6"></span><b>×2</b></li><li><span style="background:#5b7290"></span><b>×3</b></li><li><span style="background:#f4f1ea"></span><b>×3</b></li><li><span style="background:#6e7451"></span><b>×2</b></li><li><span style="background:#2f3a56"></span><b>×2</b></li><li><span style="background:#cdbfa4"></span><b>×2</b></li><li><span style="background:#6b4a35"></span><b>×2</b></li><li><span style="background:#b5603c"></span><b>×1</b></li></ul>
-              <figcaption>{{trips.viz.bag}}</figcaption>
-            </div>
-          </figure>
-        </div>
-
-        <picture>
-          <source srcset="{{@base}}assets/shots/trip.webp" type="image/webp" />
-          <img
-            class="shot shot--lift calendar__shot"
-            src="{{@base}}assets/shots/trip.jpg"
-            width="540" height="1169"
-            loading="lazy" decoding="async"
-            alt="{{trips.alt}}" />
-        </picture>
       </div>
     </section>
 
     <!-- ── пояснення оцінок ────────────────────────────────── -->
-    <section class="section band" id="why" data-section="wedge" data-order="10">
+    <section class="section band" id="why" data-section="wedge" data-order="9">
       <div class="wrap">
         <div style="max-width: 47.5rem">
           <p class="eyebrow">{{wedge.eyebrow}}</p>
@@ -395,7 +332,7 @@
     </section>
 
     <!-- ── чим Lelia не є ─────────────────────────────────────────── -->
-    <section class="section dark manifesto" id="not" data-section="not" data-order="11">
+    <section class="section dark manifesto" id="not" data-section="not" data-order="10">
       <div class="wrap">
         <div style="max-width: 51.25rem">
           <p class="eyebrow">{{not.eyebrow}}</p>
@@ -424,7 +361,7 @@
     </section>
 
     <!-- ── 11 · питання ───────────────────────────────────────────── -->
-    <section class="section band" data-section="faq" data-order="12">
+    <section class="section band" data-section="faq" data-order="11">
       <div class="wrap faq">
         <div>
           <p class="eyebrow">{{faq.eyebrow}}</p>
@@ -436,6 +373,12 @@
             <summary><h3>{{faq.anyway.q}}</h3><span class="faq__chev" aria-hidden="true"></span></summary>
             <p class="prose">
               {{faq.anyway.a}}
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary><h3>{{faq.money.q}}</h3><span class="faq__chev" aria-hidden="true"></span></summary>
+            <p class="prose">
+              {{faq.money.a}}
             </p>
           </details>
           <details class="faq__item">
@@ -503,7 +446,7 @@
     </section>
 
     <!-- ── 12 · фінальний заклик ──────────────────────────────────── -->
-    <section class="section finale" id="get" data-section="finale" data-order="13">
+    <section class="section finale" id="get" data-section="finale" data-order="12">
       <div class="wrap">
         <div class="finale__inner">
           <h2 class="display">{{finale.h}}</h2>
