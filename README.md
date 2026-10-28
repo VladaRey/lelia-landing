@@ -80,7 +80,7 @@ three axes the app names. `wedge.p` beside them must use the same words for
 those axes as the quotes do — temperature, saturation, lightness — or the
 page contradicts the app two lines below its own claim.
 
-**Structure since the 1.4 positioning («Fewer clothes. Every one a favourite.»).**
+**Structure since the 1.4 positioning («Fewer clothes. Each one a favourite.»).**
 Three main themes carry the page — 01 in the shop, 02 cost per wear, 03 the
 closet review — then 04 how to start and a single 05 «And more» card row for
 today’s outfit, challenges, trips and colour type (they used to be three
