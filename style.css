@@ -1987,6 +1987,8 @@ html[lang="pl"] .story__big::after { content: "”"; }
 .wd__item img { width: 100%; height: auto; margin-top: -14%; }
 .wd__floor { margin-top: auto; height: 3.5rem; border-top: 6px solid #c7b08c; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 0.25rem; }
 .wd__shoes { height: 2.75rem; width: auto; margin-top: -2.25rem; }
+.wd__bag { height: 3.75rem; width: auto; margin-top: -3.25rem; }
+.wd__bag + .wd__bag { margin-left: 0.5rem; height: 3.4rem; }
 .wd__door { position: absolute; top: 0; bottom: 0; width: 3.25rem; background: linear-gradient(90deg, #cdb894, #dccaa9); }
 .wd__door::after { content: ""; position: absolute; top: 48%; width: 5px; height: 2.25rem; border-radius: 3px; background: #8f8068; }
 .wd__door--l { right: 100%; clip-path: polygon(0 0, 100% 3%, 100% 97%, 0 100%); }
@@ -2005,6 +2007,8 @@ html[lang="pl"] .story__big::after { content: "”"; }
   .wd__item { width: 88%; }
   .wd__item--extra { display: none; }
   .wd__shoes { height: 2rem; margin-top: -1.5rem; }
+  .wd__bag { height: 2.4rem; margin-top: -2rem; }
+  .wd__bag + .wd__bag { display: none; }
 }
 .phone {
   position: relative; z-index: 2;
