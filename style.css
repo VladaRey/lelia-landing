@@ -1698,27 +1698,6 @@ a:hover { color: var(--accent-hover); }
   .split--shop .flow { order: -1; }
 }
 
-/* ── історія: чому з'явилася Lelia ─────────────────────────────── */
-.story__inner { max-width: 47.5rem; }
-.story__quote {
-  border-left: 3px solid var(--accent);
-  margin: 1.75rem 0 0;
-  padding: 0.25rem 0 0.25rem 1.5rem;
-}
-.story__quote p {
-  color: var(--prose);
-  font-size: clamp(1.0625rem, 0.98rem + 0.35vw, 1.25rem);
-  line-height: 1.6;
-  margin: 0;
-}
-.story__quote p + p { margin-top: 1rem; }
-.story__sign {
-  color: var(--muted);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  margin-top: 1.25rem;
-}
-
 /* ── 05 · і ще: чотири картки з маленьким малюнком над кожною ─────── */
 .more .ch__viz { max-width: 12rem; height: auto; min-height: 2.25rem; align-content: end; }
 .more__viz { display: flex; gap: 6px; margin-bottom: 1rem; min-height: 2.25rem; align-items: flex-end; }
@@ -1729,3 +1708,149 @@ a:hover { color: var(--accent-hover); }
 .more__viz--bag span { width: 1rem; height: 1rem; border-radius: 4px; }
 .more__viz--palette span { width: 1.5rem; height: 1.5rem; border-radius: 50%; margin-left: -4px; box-shadow: 0 0 0 2px #fffdf8; }
 .more__viz--palette span:first-child { margin-left: 0; }
+
+/* ── історія: бирки з шафи й слова авторки ──────────────────────── */
+.story__inner { display: grid; gap: 2.5rem; }
+.story__closet { margin: 0; position: relative; }
+.story__rail-label { color: var(--muted); font-size: 0.875rem; margin-bottom: 0.75rem; }
+/* Штанга шафи: бирки «висять» на ній на нитках. */
+.story__rail { height: 6px; border-radius: 3px; background: #d6ccbb; }
+.tags { list-style: none; margin: 0; padding: 0 0.5rem; display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; }
+@media (min-width: 48rem) {
+  /* Одним рядком під штангою: кожна бирка висить на своїй нитці. */
+  .tags { flex-wrap: nowrap; justify-content: space-around; }
+}
+@media (max-width: 47.99rem) {
+  /* На телефоні бирки стовпчиком — нитки до штанги тут лише плутали б. */
+  .story__rail, .tag::before { display: none; }
+  .tags { flex-direction: column; align-items: flex-start; padding: 0; }
+  .tag { margin-top: 0.25rem; }
+  .tag--2 { margin-left: 2.5rem; }
+}
+.tag {
+  position: relative;
+  margin-top: 2.25rem;
+  background: var(--surface);
+  border: 1px solid var(--rule-card);
+  border-radius: 0.5rem 0.5rem 0.75rem 0.75rem;
+  padding: 1.75rem 1.25rem 1.125rem;
+  min-width: 11rem;
+  box-shadow: 0 10px 24px -14px rgba(43, 39, 36, 0.35);
+  transform-origin: 50% -2.25rem;
+}
+/* Нитка від штанги до отвору. */
+.tag::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -2.25rem;
+  height: 2.75rem;
+  width: 1px;
+  background: #b9ad99;
+}
+.tag__hole {
+  position: absolute;
+  left: 50%;
+  top: 0.5rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin-left: -0.3125rem;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--rule-card);
+}
+.tag__text { display: block; font-weight: 700; font-size: 1.0625rem; line-height: 1.3; color: var(--ink); text-align: center; }
+.tag--1 { transform: rotate(-4deg); }
+.tag--2 { transform: rotate(2.5deg); }
+.tag--3 { transform: rotate(-1.5deg); }
+.story__quote { margin: 0; max-width: 46rem; }
+.story__big {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.story__big::before { content: "«"; color: var(--accent); }
+.story__big::after { content: "»"; color: var(--accent); }
+html[lang="en"] .story__big::before { content: "“"; }
+html[lang="en"] .story__big::after { content: "”"; }
+html[lang="pl"] .story__big::before { content: "„"; }
+html[lang="pl"] .story__big::after { content: "”"; }
+.story__after { margin-top: 1rem; color: var(--prose); font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); line-height: 1.6; }
+.story__sign { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem; font-weight: 700; color: var(--ink); font-size: 0.9375rem; }
+.story__avatar {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  background: var(--accent); color: #fffdf8; font-weight: 700;
+}
+
+
+/* ── 02 · ціна за вихід: дві картки з діленням ─────────────────────── */
+.ppw { display: grid; gap: 1rem; margin-top: 2rem; }
+.ppw__card {
+  background: var(--surface);
+  border: 1px solid var(--rule-card);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border-top: 4px solid var(--card-accent);
+}
+.ppw__card--bad { --card-accent: var(--no); }
+.ppw__card--good { --card-accent: var(--accent); }
+.ppw__name { color: var(--muted); font-size: 0.9375rem; font-weight: 700; }
+.ppw__math { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin-top: 0.5rem; font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem); font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.ppw__op { color: var(--muted); font-weight: 500; }
+.ppw__dots { display: grid; grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 4px; margin-top: 1.25rem; max-width: 22rem; }
+.ppw__d { aspect-ratio: 1; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--rule-faq); }
+.ppw__d--on { background: var(--card-accent); box-shadow: none; }
+.ppw__result { margin-top: 1.25rem; font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 1.6rem + 1.6vw, 3rem); line-height: 1; letter-spacing: -0.02em; color: var(--card-accent); }
+.ppw__card--good .ppw__result { color: var(--accent-ink); }
+.ppw__note { margin-top: 0.625rem; color: var(--prose); }
+@media (min-width: 48rem) { .ppw { grid-template-columns: 1fr 1fr; gap: 1.25rem; } .ppw__card { padding: 1.75rem 2rem; } }
+
+/* ── 03 · розбір: частка в ділі й рішення ──────────────────────────── */
+.review { display: grid; gap: 1rem; margin-top: 2rem; }
+.review__card { margin: 0; background: var(--surface); border: 1px solid var(--rule-card); border-radius: 1rem; padding: 1.5rem; }
+.review__title { color: var(--muted); font-size: 0.9375rem; font-weight: 700; }
+.review__big { margin-top: 0.5rem; font-family: var(--display); font-weight: 700; font-size: clamp(2.25rem, 1.8rem + 1.8vw, 3.5rem); line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
+.review__big span { font-family: var(--sans); font-size: 1rem; font-weight: 500; letter-spacing: 0; color: var(--prose); }
+.review__bar { display: flex; gap: 3px; height: 1.25rem; border-radius: 999px; overflow: hidden; margin-top: 1.25rem; }
+.review__seg--often { background: var(--accent); }
+.review__seg--once { background: var(--accent-soft); }
+.review__seg--idle { background: var(--paper-band); box-shadow: inset 0 0 0 1.5px var(--rule-faq); }
+.review__legend { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.5rem; color: var(--prose); font-size: 0.9375rem; }
+.review__legend li { display: flex; align-items: center; gap: 0.5rem; }
+.review__legend b { color: var(--ink); font-variant-numeric: tabular-nums; min-width: 1.5rem; }
+.review__key { width: 0.875rem; height: 0.875rem; border-radius: 0.25rem; flex: none; }
+.review__list { list-style: none; margin: 0.75rem 0 0; padding: 0; }
+.review__list li { display: flex; gap: 0.875rem; padding: 0.875rem 0; }
+.review__list li + li { border-top: 1px solid var(--rule); }
+.review__list h3 { margin: 0; font-size: 1.0625rem; }
+.review__list p { margin-top: 0.25rem; color: var(--prose); font-size: 0.9375rem; line-height: 1.5; }
+.review__icon { flex: none; width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; background: var(--paper-band); display: inline-flex; align-items: center; justify-content: center; }
+.review__icon svg { width: 1.375rem; height: 1.375rem; fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (min-width: 64rem) { .review { grid-template-columns: 5fr 6fr; gap: 1.25rem; align-items: start; } .review__card { padding: 1.75rem 2rem; } }
+
+/* ── 07 · число проти причини — без скріна ──────────────────────────── */
+.versus { display: grid; gap: 1rem; margin-top: 2rem; align-items: center; }
+.versus .score-card__number { margin-top: 0.75rem; font-size: clamp(2.5rem, 2rem + 2vw, 3.75rem); }
+.versus .score-card__note { margin-top: 0.5rem; }
+.versus__arrow { justify-self: center; color: var(--muted); font-size: 1.75rem; transform: rotate(90deg); }
+.weights--strip { margin-top: 1.25rem; }
+.weights--strip .weights__legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.weights__note { margin-top: 0.875rem; color: var(--prose); font-size: 0.9375rem; line-height: 1.55; }
+@media (min-width: 64rem) {
+  .versus { grid-template-columns: 4fr auto 7fr; gap: 1.5rem; }
+  .versus__arrow { transform: none; }
+  .weights--strip { display: grid; grid-template-columns: 12rem 1fr; column-gap: 2rem; align-items: center; padding: 1.25rem 2rem; }
+  .weights--strip figcaption { grid-row: 1 / span 3; }
+  .weights--strip .weights__bar { margin-top: 0; }
+  .weights--strip .weights__legend { grid-template-columns: repeat(4, auto); justify-content: start; gap: 0.375rem 1.5rem; }
+}
+
+/* 05 · малюнки над картками «перш ніж купити» */
+.more__viz--similar span { width: 1.75rem; height: 2.25rem; border-radius: 6px; }
+.more__viz--plenty span { width: 1rem; height: 1.5rem; border-radius: 4px; box-shadow: inset 0 0 0 1.5px var(--rule-faq); }
+.more__viz--plenty span.on { background: var(--accent); box-shadow: none; }

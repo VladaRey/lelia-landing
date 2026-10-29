@@ -81,12 +81,16 @@ those axes as the quotes do — temperature, saturation, lightness — or the
 page contradicts the app two lines below its own claim.
 
 **Structure since the 1.4 positioning («Fewer clothes. Each one a favourite.»).**
-Three main themes carry the page — 01 in the shop, 02 cost per wear, 03 the
-closet review — then 04 how to start and a single 05 «And more» card row for
-today’s outfit, challenges, trips and colour type (they used to be three
-sections of their own). A short founder story (`story.*`) sits right after the
-trust strip; `story.sign` is the author’s name and must stay her own words.
-All copy is gender-neutral except that story, which is one person speaking.
+Hero with one sentence under the title; a founder story (`story.*`) right after
+the trust strip — three hang-tags on a rail («what hung in my closet») and her
+words as a large quote; then 01 in the shop, 02 cost per wear (two cards, the
+division spelled out, one dot per wear), 03 the closet review (share in use and
+what to do with idle pieces), 04 how to start, 05 «Before you buy» (what keeps
+you from buying what you don't need: similar, plenty, colour, what to wear it
+with), 06 «And more» (today's outfit, challenges, trips), 07 how scores explain
+themselves — no screenshot, a 92 % card against Lelia's reasons and the weights
+strip. `story.sign` is the author's name and must stay her own words; all copy
+is gender-neutral except that story, which is one person speaking.
 
 To add a language: add its code to `LANGS` in `build.js`, put its endonym in
 `LANG_NAMES` beside it, and drop `i18n/<code>.json` next to the others. The
