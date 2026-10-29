@@ -1950,7 +1950,7 @@ html[lang="pl"] .story__big::after { content: "”"; }
 .cards li:hover, .ppw__card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px -18px rgba(43, 39, 36, 0.35); }
 
 @media (prefers-reduced-motion: reduce) {
-  .rack__item, .mc__item { animation: none !important; }
+  .rack__item { animation: none !important; }
 }
 
 
@@ -1961,32 +1961,15 @@ html[lang="pl"] .story__big::after { content: "”"; }
 .ppw__head .ppw__math { margin-top: 0.25rem; }
 @media (min-width: 48rem) { .ppw__img { width: 6.5rem; } .ppw__head { gap: 1.25rem; } }
 
-/* ── 1 · герой: маленька шафа й телефон у рамці ──────────────────────── */
-/* Шафа ліворуч на всю висоту блоку, телефон перекриває її правий край —
-   ніби поруч із речами, а не замість них. */
-.hero__visual { position: relative; display: flex; align-items: center; justify-content: flex-end; margin-top: 2.5rem; min-height: 27rem; }
-.mc { position: absolute; left: 0; top: 4%; bottom: 0; width: 62%; }
-.mc__rail { position: absolute; top: 0; left: 0; right: 0; height: 7px; border-radius: 4px; background: #c9bea9; }
-.mc__items { list-style: none; margin: 0; padding: 0 3%; display: flex; gap: 1%; }
-.mc__item { width: 42%; display: flex; flex-direction: column; align-items: center; transform-origin: 50% 0; }
-.mc__item + .mc__item { margin-left: -11%; }
-.mc__item--3 { width: 34%; }
-.mc__hanger { width: 62%; height: auto; margin-top: -7px; fill: none; stroke: #9b8f7c; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; position: relative; z-index: 1; }
-.mc__img { width: 100%; height: auto; margin-top: -14%; }
-.mc__floor { position: absolute; left: 4%; bottom: 16%; width: 58%; display: flex; align-items: flex-end; gap: 6%; }
-.mc__bag { width: 42%; height: auto; display: block; }
-.mc__shoes { width: 40%; height: auto; display: block; }
+/* ── 1 · герой: телефон у рамці ───────────────────────────────────── */
+.hero__visual { display: flex; justify-content: center; margin-top: 2.5rem; }
 .phone {
   position: relative; z-index: 2;
-  width: 46%; max-width: 16rem;
+  width: 72%; max-width: 19rem;
   padding: 0.5rem; border-radius: 2.6rem; background: #1f1c1a;
   box-shadow: 0 30px 60px -24px rgba(20, 17, 14, 0.5), inset 0 0 0 1.5px #3a3532;
 }
 .phone__screen { display: block; width: 100%; height: auto; border-radius: 2.1rem; }
 @media (min-width: 64rem) {
-  .hero__inner { grid-template-columns: 6fr 7fr !important; }
-  .hero__visual { margin-top: 0; min-height: 35rem; }
+  .hero__visual { margin-top: 0; justify-content: flex-end; }
 }
-.motion .mc__item { animation: sway 6s ease-in-out infinite; }
-.motion .mc__item--2 { animation-duration: 7s; animation-delay: -2s; }
-.motion .mc__item--3 { animation-duration: 6.5s; animation-delay: -4s; }
