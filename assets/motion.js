@@ -18,14 +18,24 @@
     },
     { threshold: 0.18 }
   );
-  // Тло, що перетікає: запам'ятати власний колір кожного розділу, зробити
-  // розділи прозорими й фарбувати <body> кольором того, що на середині екрана.
+  // Тло, що перетікає: світлі розділи стають прозорими, а <body> фарбується
+  // кольором того, що на середині екрана; темний і зелений лишають своє тло.
+  // Смуга прокрутки праворуч бере колір поточного розділу.
   var bodyBg = '';
+  var root = document.documentElement;
+  function light(rgb) {
+    var m = rgb.match(/\d+(\.\d+)?/g) || [255, 255, 255];
+    return (0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2]) / 255 > 0.6;
+  }
   var painter = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        document.body.style.setProperty('--scroll-bg', entry.target.getAttribute('data-bg') || bodyBg);
+        var bg = entry.target.getAttribute('data-bg') || bodyBg;
+        var isLight = light(bg);
+        if (isLight) document.body.style.setProperty('--scroll-bg', bg);
+        root.style.setProperty('--sb-track', bg);
+        root.style.setProperty('--sb-thumb', isLight ? '#b9ad99' : 'rgba(255, 253, 248, 0.55)');
       });
     },
     { rootMargin: '-50% 0px -50% 0px' }
@@ -35,7 +45,9 @@
     bodyBg = getComputedStyle(document.body).backgroundColor;
     sections.forEach(function (section) {
       var bg = getComputedStyle(section).backgroundColor;
-      section.setAttribute('data-bg', bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent' ? bodyBg : bg);
+      if (bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent') bg = bodyBg;
+      section.setAttribute('data-bg', bg);
+      if (light(bg)) section.classList.add('bg-flow');
     });
     document.documentElement.classList.add('bgscroll');
     sections.forEach(function (section) {
