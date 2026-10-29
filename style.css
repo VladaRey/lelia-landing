@@ -1993,3 +1993,21 @@ html[lang="pl"] .story__big::after { content: "”"; }
 }
 .phone__screen { display: block; width: 100%; height: auto; border-radius: 2.1rem; }
 
+
+/* ── пояснення оцінки: лише картка причин, без порівняння ─────────── */
+.versus--solo { display: block; }
+.versus--solo .reason-card { border-top-width: 1px; }
+.versus--solo .reason-card ul { margin-top: 0; }
+.versus--solo .reason:first-child { padding-top: 0; }
+.motion .is-in .versus--solo > * { animation-delay: 0s; }
+
+/* ── валіза в «І ще»: намальована, поруч — речі, що в неї їдуть ───── */
+.pics--trip { gap: 0.5rem; }
+.pics--trip img { height: 70%; }
+.suitcase { height: 100%; width: auto; overflow: visible; }
+.suitcase__body { fill: #c9a27e; stroke: #8a6a4c; stroke-width: 1.5; }
+.suitcase__strap { stroke: #8a6a4c; stroke-width: 3; opacity: 0.55; }
+.suitcase__handle { fill: none; stroke: #5c4632; stroke-width: 3; stroke-linecap: round; }
+.suitcase__wheel { fill: #3a2f27; }
+.suitcase__tag path { stroke: #5c4632; stroke-width: 1.2; fill: none; }
+.suitcase__tag rect { fill: #fffdf8; stroke: #5c4632; stroke-width: 1.2; }
