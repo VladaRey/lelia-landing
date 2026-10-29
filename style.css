@@ -1976,7 +1976,7 @@ html[lang="pl"] .story__big::after { content: "”"; }
 .hero__visual { position: relative; flex: 1; min-height: 0; width: 100%; display: flex; justify-content: center;
   margin-top: clamp(1rem, 3svh, 2rem); container-type: size; }
 /* Шафа: світлий дуб, дві комірки по боках телефона, прочинені дверцята. */
-.wd { position: absolute; left: 50%; top: 0; width: min(96%, 185cqh); height: 76%; transform: translateX(-50%);
+.wd { position: absolute; left: 50%; top: 12%; width: min(96%, 185cqh); height: 76%; transform: translateX(-50%);
   display: flex; justify-content: space-between;
   padding: 0.75rem; border-radius: 14px; background: #d6c2a2;
   box-shadow: 0 24px 50px -30px rgba(43, 39, 36, 0.45); }

@@ -100,7 +100,7 @@
     </section>
 
     <!-- ── чому з'явилася Lelia: історія авторки ─────────────────── -->
-    <section class="section story" data-section="story" data-order="3">
+    <section class="section story" data-section="story" data-order="2">
       <div class="wrap story__inner">
         <!-- Три бирки — те, що висіло в шафі. Бирка, бо саме з нею такі речі
              й висять; вигляд — гра, текст — слова авторки. -->
@@ -135,7 +135,7 @@
     </section>
 
     <!-- ── 3 · у магазині: головна дія ─────────────────────────── -->
-    <section class="section" id="how" data-section="shop" data-order="4">
+    <section class="section tone-sage" id="how" data-section="shop" data-order="3">
       <div class="wrap">
         <div class="sec-head">
           <h2 class="display h-section">{{shop.h}}</h2>
@@ -154,6 +154,38 @@
           </ol>
         </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ── 05 · перш ніж купити: що стримує зайву покупку ─────────── -->
+    <section class="section" id="before" data-section="before" data-order="4">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display h-section">{{before.h}}</h2>
+          <p class="lede">{{before.lede}}</p>
+        </div>
+        <ul class="cards more" data-stagger>
+          <li>
+            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/tshirt-black.webp" alt="" loading="lazy" decoding="async" /><span class="pics__eq">≈</span><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /></div>
+            <h3>{{before.similar.h}}</h3>
+            <p class="prose">{{before.similar.p}}</p>
+          </li>
+          <li>
+            <div class="pics pics--fan" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/hoodie.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/longsleeve.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /><span class="pics__count">×6</span></div>
+            <h3>{{before.plenty.h}}</h3>
+            <p class="prose">{{before.plenty.p}}</p>
+          </li>
+          <li>
+            <div class="more__viz more__viz--palette" aria-hidden="true"><span style="background:#b5606c"></span><span style="background:#c98c8c"></span><span style="background:#5e7a3e"></span><span style="background:#3e5a8c"></span><span style="background:#cdbfa4"></span></div>
+            <h3>{{before.colors.h}}</h3>
+            <p class="prose">{{before.colors.p}}</p>
+          </li>
+          <li>
+            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/leather-jacket.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/jeans.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/sneakers.webp" alt="" loading="lazy" decoding="async" /></div>
+            <h3>{{before.outfits.h}}</h3>
+            <p class="prose">{{before.outfits.p}}</p>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -195,38 +227,37 @@
       </div>
     </section>
 
-    <!-- ── 03 · розбір шафи: частка в ділі й що робити з рештою ────── -->
-    <section class="section tone-sage" data-section="calendar" data-order="6">
+    <!-- ── 07 · пояснення оцінок: число проти причини, без скріна ──── -->
+    <section class="section" id="why" data-section="wedge" data-order="6">
       <div class="wrap">
         <div class="sec-head">
-          <h2 class="display h-section">{{calendar.h}}</h2>
-          <p class="lede">{{calendar.lede}}</p>
+          <h2 class="display h-section">{{wedge.h}}</h2>
         </div>
 
-        <div class="review">
-          <figure data-reveal class="review__card review__share">
-            <figcaption class="review__title">{{review.share.h}}</figcaption>
-            <p class="review__big">{{review.share.big}} <span>{{review.share.label}}</span></p>
-            <div class="review__bar" role="img" aria-label="{{dots.aria}}">
-              <span class="review__seg review__seg--often" style="flex: 8"></span><span class="review__seg review__seg--once" style="flex: 5"></span><span class="review__seg review__seg--idle" style="flex: 27"></span>
-            </div>
-            <ul class="review__legend">
-              <li><span class="review__key review__seg--often"></span><b>8</b> {{dots.often}}</li>
-              <li><span class="review__key review__seg--once"></span><b>5</b> {{dots.once}}</li>
-              <li><span class="review__key review__seg--idle"></span><b>27</b> {{dots.idle}}</li>
-            </ul>
-          </figure>
-
-          <div data-reveal class="review__card review__actions">
-            <p class="review__title">{{review.actions.h}}</p>
-            <ul class="review__list">
-              <li><span class="review__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4l-1 3 2 1v12h6V8l2-1-1-3c-.5 1-2 1.5-3 1.5S8.5 5 8 4z"/></svg></span><div><h3>{{review.wear.h}}</h3><p>{{review.wear.p}}</p></div></li>
-              <li><span class="review__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M3 4h18v4H3z"/><path d="M10 12h4"/></svg></span><div><h3>{{review.away.h}}</h3><p>{{review.away.p}}</p></div></li>
-              <li><span class="review__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><div><h3>{{review.give.h}}</h3><p>{{review.give.p}}</p></div></li>
-              <li><span class="review__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16"/></svg></span><div><h3>{{review.color.h}}</h3><p>{{review.color.p}}</p></div></li>
+        <div class="versus versus--solo">
+          <div class="reason-card">
+            <!-- Перша причина працює на оцінку, друга — штраф за одну з трьох
+                 осей. Позначка повторює це кольором. -->
+            <ul>
+              <li class="reason reason--plus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 12.4l3 3 6-6.3" /></svg><span>{{quote.reason1}}</span></li>
+              <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason2}}</span></li>
             </ul>
           </div>
         </div>
+
+        <figure class="weights weights--strip">
+          <figcaption class="eyebrow">{{weights.title}}</figcaption>
+          <div class="weights__bar" aria-hidden="true">
+            <span class="w1" style="flex: 45"></span><span class="w2" style="flex: 23"></span><span class="w3" style="flex: 20"></span><span class="w4" style="flex: 12"></span>
+          </div>
+          <ul class="weights__legend">
+            <li><span class="key w1"></span>{{weights.color}} <b>45%</b></li>
+            <li><span class="key w2"></span>{{weights.occasion}} <b>23%</b></li>
+            <li><span class="key w3"></span>{{weights.season}} <b>20%</b></li>
+            <li><span class="key w4"></span>{{weights.pattern}} <b>12%</b></li>
+          </ul>
+          <p class="weights__note">{{wedge.p}}</p>
+        </figure>
       </div>
     </section>
 
@@ -264,40 +295,8 @@
       </div>
     </section>
 
-    <!-- ── 05 · перш ніж купити: що стримує зайву покупку ─────────── -->
-    <section class="section" id="before" data-section="before" data-order="8">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 class="display h-section">{{before.h}}</h2>
-          <p class="lede">{{before.lede}}</p>
-        </div>
-        <ul class="cards more" data-stagger>
-          <li>
-            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/tshirt-black.webp" alt="" loading="lazy" decoding="async" /><span class="pics__eq">≈</span><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /></div>
-            <h3>{{before.similar.h}}</h3>
-            <p class="prose">{{before.similar.p}}</p>
-          </li>
-          <li>
-            <div class="pics pics--fan" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/hoodie.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/longsleeve.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /><span class="pics__count">×6</span></div>
-            <h3>{{before.plenty.h}}</h3>
-            <p class="prose">{{before.plenty.p}}</p>
-          </li>
-          <li>
-            <div class="more__viz more__viz--palette" aria-hidden="true"><span style="background:#b5606c"></span><span style="background:#c98c8c"></span><span style="background:#5e7a3e"></span><span style="background:#3e5a8c"></span><span style="background:#cdbfa4"></span></div>
-            <h3>{{before.colors.h}}</h3>
-            <p class="prose">{{before.colors.p}}</p>
-          </li>
-          <li>
-            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/leather-jacket.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/jeans.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/sneakers.webp" alt="" loading="lazy" decoding="async" /></div>
-            <h3>{{before.outfits.h}}</h3>
-            <p class="prose">{{before.outfits.p}}</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- ── 06 · і ще: щоденне, не про покупки ──────────────────────── -->
-    <section class="section tone-green" id="more" data-section="more" data-order="9">
+    <section class="section tone-green" id="more" data-section="more" data-order="8">
       <div class="wrap">
         <div class="sec-head">
           <h2 class="display h-section">{{more.h}}</h2>
@@ -322,42 +321,8 @@
       </div>
     </section>
 
-    <!-- ── 07 · пояснення оцінок: число проти причини, без скріна ──── -->
-    <section class="section" id="why" data-section="wedge" data-order="10">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 class="display h-section">{{wedge.h}}</h2>
-        </div>
-
-        <div class="versus versus--solo">
-          <div class="reason-card">
-            <!-- Перша причина працює на оцінку, друга — штраф за одну з трьох
-                 осей. Позначка повторює це кольором. -->
-            <ul>
-              <li class="reason reason--plus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 12.4l3 3 6-6.3" /></svg><span>{{quote.reason1}}</span></li>
-              <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason2}}</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <figure class="weights weights--strip">
-          <figcaption class="eyebrow">{{weights.title}}</figcaption>
-          <div class="weights__bar" aria-hidden="true">
-            <span class="w1" style="flex: 45"></span><span class="w2" style="flex: 23"></span><span class="w3" style="flex: 20"></span><span class="w4" style="flex: 12"></span>
-          </div>
-          <ul class="weights__legend">
-            <li><span class="key w1"></span>{{weights.color}} <b>45%</b></li>
-            <li><span class="key w2"></span>{{weights.occasion}} <b>23%</b></li>
-            <li><span class="key w3"></span>{{weights.season}} <b>20%</b></li>
-            <li><span class="key w4"></span>{{weights.pattern}} <b>12%</b></li>
-          </ul>
-          <p class="weights__note">{{wedge.p}}</p>
-        </figure>
-      </div>
-    </section>
-
     <!-- ── чим Lelia не є ─────────────────────────────────────────── -->
-    <section class="section dark manifesto" id="not" data-section="not" data-order="11">
+    <section class="section dark manifesto" id="not" data-section="not" data-order="9">
       <div class="wrap">
         <div style="max-width: 51.25rem">
           <h2 class="display manifesto__title">{{not.h}}</h2>
@@ -385,7 +350,7 @@
     </section>
 
     <!-- ── 11 · питання ───────────────────────────────────────────── -->
-    <section class="section band" data-section="faq" data-order="12">
+    <section class="section band" data-section="faq" data-order="10">
       <div class="wrap faq">
         <div>
           <h2 class="display faq__title">{{faq.h}}</h2>
@@ -469,7 +434,7 @@
     </section>
 
     <!-- ── 12 · фінальний заклик ──────────────────────────────────── -->
-    <section class="section finale" id="get" data-section="finale" data-order="13">
+    <section class="section finale" id="get" data-section="finale" data-order="11">
       <div class="wrap">
         <div class="finale__inner">
           <h2 class="display">{{finale.h}}</h2>
