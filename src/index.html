@@ -69,21 +69,30 @@
           </div>
         </div>
 
+        <!-- Заголовок у картинці: невелика шафа — кілька речей на штанзі й
+             пара взуття, — а поруч телефон із перевіркою. Речі з гардероба-
+             прикладу застосунку. -->
         <div class="hero__visual">
-        <!-- Речі навколо телефона — з гардероба-прикладу застосунку; повільно
-             пливуть (motion.js вмикає анімацію, без нього вони просто стоять). -->
-        <img class="float float--1" src="{{@base}}assets/clothes/coat.webp" alt="" loading="lazy" decoding="async" />
-        <img class="float float--2" src="{{@base}}assets/clothes/bag-pink.webp" alt="" loading="lazy" decoding="async" />
-        <img class="float float--3" src="{{@base}}assets/clothes/sneakers.webp" alt="" loading="lazy" decoding="async" />
-        <picture>
-          <source srcset="{{@base}}assets/shots/fitcolor.webp" type="image/webp" />
-          <img
-            class="shot shot--lift hero__shot"
-            src="{{@base}}assets/shots/fitcolor.jpg"
-            width="540" height="1169"
-            loading="eager" fetchpriority="high" decoding="async"
-            alt="{{hero.alt}}" />
-        </picture>
+          <div class="mc" aria-hidden="true">
+            <div class="mc__rail"></div>
+            <ul class="mc__items">
+              <li class="mc__item mc__item--1"><svg class="mc__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img class="mc__img" src="{{@base}}assets/clothes/coat.webp" alt="" decoding="async" /></li>
+              <li class="mc__item mc__item--2"><svg class="mc__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img class="mc__img" src="{{@base}}assets/clothes/leather-jacket.webp" alt="" decoding="async" /></li>
+              <li class="mc__item mc__item--3"><svg class="mc__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img class="mc__img" src="{{@base}}assets/clothes/longsleeve.webp" alt="" decoding="async" /></li>
+            </ul>
+            <div class="mc__floor"><img class="mc__shoes" src="{{@base}}assets/clothes/sneakers.webp" alt="" decoding="async" /></div>
+          </div>
+          <div class="phone">
+            <picture>
+              <source srcset="{{@base}}assets/shots/fitcolor.webp" type="image/webp" />
+              <img
+                class="phone__screen"
+                src="{{@base}}assets/shots/fitcolor.jpg"
+                width="540" height="1169"
+                loading="eager" fetchpriority="high" decoding="async"
+                alt="{{hero.alt}}" />
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -201,17 +210,25 @@
              світяться чотири, у простої — усі. Ділення читається без графіка. -->
         <div class="ppw" role="group" aria-label="{{cost.aria}}">
           <div data-reveal class="ppw__card ppw__card--bad">
-            <img class="ppw__img" src="{{@base}}assets/clothes/faux-fur.webp" alt="" loading="lazy" decoding="async" />
-            <p class="ppw__name">{{cost.a.name}}</p>
-            <p class="ppw__math"><span class="ppw__price">{{cost.a.price}}</span><span class="ppw__op">÷</span><span>{{cost.a.wears}}</span></p>
+            <div class="ppw__head">
+              <img class="ppw__img" src="{{@base}}assets/clothes/faux-fur.webp" alt="" loading="lazy" decoding="async" />
+              <div>
+                <p class="ppw__name">{{cost.a.name}}</p>
+                <p class="ppw__math"><span class="ppw__price">{{cost.a.price}}</span><span class="ppw__op">÷</span><span>{{cost.a.wears}}</span></p>
+              </div>
+            </div>
             <div class="ppw__dots" aria-hidden="true"><span class="ppw__d ppw__d--on" style="--i:0"></span><span class="ppw__d ppw__d--on" style="--i:1"></span><span class="ppw__d ppw__d--on" style="--i:2"></span><span class="ppw__d ppw__d--on" style="--i:3"></span><span class="ppw__d" style="--i:4"></span><span class="ppw__d" style="--i:5"></span><span class="ppw__d" style="--i:6"></span><span class="ppw__d" style="--i:7"></span><span class="ppw__d" style="--i:8"></span><span class="ppw__d" style="--i:9"></span><span class="ppw__d" style="--i:10"></span><span class="ppw__d" style="--i:11"></span><span class="ppw__d" style="--i:12"></span><span class="ppw__d" style="--i:13"></span><span class="ppw__d" style="--i:14"></span><span class="ppw__d" style="--i:15"></span><span class="ppw__d" style="--i:16"></span><span class="ppw__d" style="--i:17"></span><span class="ppw__d" style="--i:18"></span><span class="ppw__d" style="--i:19"></span><span class="ppw__d" style="--i:20"></span><span class="ppw__d" style="--i:21"></span><span class="ppw__d" style="--i:22"></span><span class="ppw__d" style="--i:23"></span><span class="ppw__d" style="--i:24"></span><span class="ppw__d" style="--i:25"></span><span class="ppw__d" style="--i:26"></span><span class="ppw__d" style="--i:27"></span><span class="ppw__d" style="--i:28"></span><span class="ppw__d" style="--i:29"></span><span class="ppw__d" style="--i:30"></span><span class="ppw__d" style="--i:31"></span><span class="ppw__d" style="--i:32"></span><span class="ppw__d" style="--i:33"></span><span class="ppw__d" style="--i:34"></span><span class="ppw__d" style="--i:35"></span><span class="ppw__d" style="--i:36"></span><span class="ppw__d" style="--i:37"></span><span class="ppw__d" style="--i:38"></span><span class="ppw__d" style="--i:39"></span><span class="ppw__d" style="--i:40"></span><span class="ppw__d" style="--i:41"></span><span class="ppw__d" style="--i:42"></span><span class="ppw__d" style="--i:43"></span><span class="ppw__d" style="--i:44"></span><span class="ppw__d" style="--i:45"></span><span class="ppw__d" style="--i:46"></span><span class="ppw__d" style="--i:47"></span><span class="ppw__d" style="--i:48"></span><span class="ppw__d" style="--i:49"></span><span class="ppw__d" style="--i:50"></span><span class="ppw__d" style="--i:51"></span><span class="ppw__d" style="--i:52"></span><span class="ppw__d" style="--i:53"></span><span class="ppw__d" style="--i:54"></span><span class="ppw__d" style="--i:55"></span><span class="ppw__d" style="--i:56"></span><span class="ppw__d" style="--i:57"></span><span class="ppw__d" style="--i:58"></span><span class="ppw__d" style="--i:59"></span></div>
             <p class="ppw__result">= {{cost.a.result}}</p>
             <p class="ppw__note">{{cost.a.note}}</p>
           </div>
           <div data-reveal class="ppw__card ppw__card--good">
-            <img class="ppw__img" src="{{@base}}assets/clothes/coat.webp" alt="" loading="lazy" decoding="async" />
-            <p class="ppw__name">{{cost.b.name}}</p>
-            <p class="ppw__math"><span class="ppw__price">{{cost.b.price}}</span><span class="ppw__op">÷</span><span>{{cost.b.wears}}</span></p>
+            <div class="ppw__head">
+              <img class="ppw__img" src="{{@base}}assets/clothes/coat.webp" alt="" loading="lazy" decoding="async" />
+              <div>
+                <p class="ppw__name">{{cost.b.name}}</p>
+                <p class="ppw__math"><span class="ppw__price">{{cost.b.price}}</span><span class="ppw__op">÷</span><span>{{cost.b.wears}}</span></p>
+              </div>
+            </div>
             <div class="ppw__dots" aria-hidden="true"><span class="ppw__d ppw__d--on" style="--i:0"></span><span class="ppw__d ppw__d--on" style="--i:1"></span><span class="ppw__d ppw__d--on" style="--i:2"></span><span class="ppw__d ppw__d--on" style="--i:3"></span><span class="ppw__d ppw__d--on" style="--i:4"></span><span class="ppw__d ppw__d--on" style="--i:5"></span><span class="ppw__d ppw__d--on" style="--i:6"></span><span class="ppw__d ppw__d--on" style="--i:7"></span><span class="ppw__d ppw__d--on" style="--i:8"></span><span class="ppw__d ppw__d--on" style="--i:9"></span><span class="ppw__d ppw__d--on" style="--i:10"></span><span class="ppw__d ppw__d--on" style="--i:11"></span><span class="ppw__d ppw__d--on" style="--i:12"></span><span class="ppw__d ppw__d--on" style="--i:13"></span><span class="ppw__d ppw__d--on" style="--i:14"></span><span class="ppw__d ppw__d--on" style="--i:15"></span><span class="ppw__d ppw__d--on" style="--i:16"></span><span class="ppw__d ppw__d--on" style="--i:17"></span><span class="ppw__d ppw__d--on" style="--i:18"></span><span class="ppw__d ppw__d--on" style="--i:19"></span><span class="ppw__d ppw__d--on" style="--i:20"></span><span class="ppw__d ppw__d--on" style="--i:21"></span><span class="ppw__d ppw__d--on" style="--i:22"></span><span class="ppw__d ppw__d--on" style="--i:23"></span><span class="ppw__d ppw__d--on" style="--i:24"></span><span class="ppw__d ppw__d--on" style="--i:25"></span><span class="ppw__d ppw__d--on" style="--i:26"></span><span class="ppw__d ppw__d--on" style="--i:27"></span><span class="ppw__d ppw__d--on" style="--i:28"></span><span class="ppw__d ppw__d--on" style="--i:29"></span><span class="ppw__d ppw__d--on" style="--i:30"></span><span class="ppw__d ppw__d--on" style="--i:31"></span><span class="ppw__d ppw__d--on" style="--i:32"></span><span class="ppw__d ppw__d--on" style="--i:33"></span><span class="ppw__d ppw__d--on" style="--i:34"></span><span class="ppw__d ppw__d--on" style="--i:35"></span><span class="ppw__d ppw__d--on" style="--i:36"></span><span class="ppw__d ppw__d--on" style="--i:37"></span><span class="ppw__d ppw__d--on" style="--i:38"></span><span class="ppw__d ppw__d--on" style="--i:39"></span><span class="ppw__d ppw__d--on" style="--i:40"></span><span class="ppw__d ppw__d--on" style="--i:41"></span><span class="ppw__d ppw__d--on" style="--i:42"></span><span class="ppw__d ppw__d--on" style="--i:43"></span><span class="ppw__d ppw__d--on" style="--i:44"></span><span class="ppw__d ppw__d--on" style="--i:45"></span><span class="ppw__d ppw__d--on" style="--i:46"></span><span class="ppw__d ppw__d--on" style="--i:47"></span><span class="ppw__d ppw__d--on" style="--i:48"></span><span class="ppw__d ppw__d--on" style="--i:49"></span><span class="ppw__d ppw__d--on" style="--i:50"></span><span class="ppw__d ppw__d--on" style="--i:51"></span><span class="ppw__d ppw__d--on" style="--i:52"></span><span class="ppw__d ppw__d--on" style="--i:53"></span><span class="ppw__d ppw__d--on" style="--i:54"></span><span class="ppw__d ppw__d--on" style="--i:55"></span><span class="ppw__d ppw__d--on" style="--i:56"></span><span class="ppw__d ppw__d--on" style="--i:57"></span><span class="ppw__d ppw__d--on" style="--i:58"></span><span class="ppw__d ppw__d--on" style="--i:59"></span></div>
             <p class="ppw__result">= {{cost.b.result}}</p>
             <p class="ppw__note">{{cost.b.note}}</p>
@@ -292,7 +309,7 @@
         </div>
         <ul class="cards more" data-stagger>
           <li>
-            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/tank.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /><span class="pics__eq">≈</span></div>
+            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/tshirt-black.webp" alt="" loading="lazy" decoding="async" /><span class="pics__eq">≈</span><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /></div>
             <h3>{{before.similar.h}}</h3>
             <p class="prose">{{before.similar.p}}</p>
           </li>
