@@ -1716,7 +1716,7 @@ a:hover { color: var(--accent-hover); }
 .more__viz--palette span:first-child { margin-left: 0; }
 
 /* ── історія: бирки з шафи й слова авторки ──────────────────────── */
-.story__inner { display: grid; gap: 2.5rem; }
+.story__inner { display: grid; gap: 1.5rem; }
 .story__closet { margin: 0; position: relative; }
 .story__rail-label { color: var(--muted); font-size: 0.875rem; margin-bottom: 0.75rem; }
 /* Штанга шафи: бирки «висять» на ній на нитках. */
