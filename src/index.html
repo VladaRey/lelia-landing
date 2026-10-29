@@ -252,27 +252,34 @@
       </div>
     </section>
 
-    <!-- ── 04 · як почати: сфотографувати речі ──────────────────────── -->
+    <!-- ── як почати: сфотографувати → позначити носіння → розбір ───── -->
     <section class="section band" data-section="own" data-order="7">
       <div class="wrap">
         <div class="sec-head">
           <h2 class="display h-section">{{own.h}}</h2>
         </div>
 
-        <div class="split split--own">
-          <div>
-            <ol class="steps">
-              <li><h3>{{own.s1.h}}</h3><p>{{own.s1.p}}</p></li>
-              <li><h3>{{own.s2.h}}</h3><p>{{own.s2.p}}</p></li>
-              <li><h3>{{own.s3.h}}</h3><p>{{own.s3.p}}</p></li>
-            </ol>
-            <p class="sec-foot">{{own.first.p}}</p>
-          </div>
-          <picture>
-            <source srcset="{{@base}}assets/shots/dropper.webp" type="image/webp" />
-            <img class="shot shot--lift" src="{{@base}}assets/shots/dropper.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{own.alt}}" />
-          </picture>
-        </div>
+        <ol class="cards more start" data-stagger>
+          <li>
+            <span class="start__n">1</span>
+            <div class="pics" aria-hidden="true"><span class="snap"><img src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /></span><span class="pics__eq">→</span><img src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /></div>
+            <h3>{{own.s1.h}}</h3>
+            <p class="prose">{{own.s1.p}}</p>
+          </li>
+          <li>
+            <span class="start__n">2</span>
+            <div class="pics freq" aria-hidden="true"><img src="{{@base}}assets/clothes/longsleeve.webp" alt="" loading="lazy" decoding="async" /><span class="freq__chips"><span class="freq__chip">{{own.s2.c1}}</span><span class="freq__chip freq__chip--on">{{own.s2.c2}}</span><span class="freq__chip">{{own.s2.c3}}</span></span></div>
+            <h3>{{own.s2.h}}</h3>
+            <p class="prose">{{own.s2.p}}</p>
+          </li>
+          <li>
+            <span class="start__n">3</span>
+            <div class="pics mini-review" aria-hidden="true"><span class="mini-review__label">{{own.s3.tag}}</span><span class="review__bar"><span class="review__seg review__seg--often" style="flex: 8"></span><span class="review__seg review__seg--once" style="flex: 5"></span><span class="review__seg review__seg--idle" style="flex: 27"></span></span></div>
+            <h3>{{own.s3.h}}</h3>
+            <p class="prose">{{own.s3.p}}</p>
+          </li>
+        </ol>
+        <p class="sec-foot">{{own.first.p}}</p>
       </div>
     </section>
 
