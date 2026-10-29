@@ -1854,3 +1854,110 @@ html[lang="pl"] .story__big::after { content: "”"; }
 .more__viz--similar span { width: 1.75rem; height: 2.25rem; border-radius: 6px; }
 .more__viz--plenty span { width: 1rem; height: 1.5rem; border-radius: 4px; box-shadow: inset 0 0 0 1.5px var(--rule-faq); }
 .more__viz--plenty span.on { background: var(--accent); box-shadow: none; }
+
+/* ── тони розділів: щоб сторінка не була одного кольору ─────────────── */
+.tone-blush { background: #f4e5e1; }
+.tone-sage { background: #e7edda; }
+.tone-ink { background: var(--ink); color: var(--on-dark); }
+.tone-ink .eyebrow { color: var(--on-dark-muted); }
+.tone-ink .lede, .tone-ink .sec-foot { color: var(--on-dark-prose); }
+.tone-ink .ppw__card { border-color: transparent; color: var(--ink); }
+.tone-green { background: var(--accent); color: #fffdf8; }
+.tone-green .eyebrow { color: #e2ebcd; }
+.tone-green .cards li { border-color: transparent; color: var(--ink); }
+
+/* ── картинки речей ─────────────────────────────────────────────────── */
+.hero__visual { position: relative; }
+.float { position: absolute; width: 30%; max-width: 9rem; z-index: 0; filter: drop-shadow(0 14px 18px rgba(43, 39, 36, 0.18)); }
+.float--1 { left: -14%; top: 8%; transform: rotate(-8deg); }
+.float--2 { right: -10%; bottom: 14%; width: 26%; transform: rotate(7deg); }
+.float--3 { left: -6%; bottom: 2%; width: 28%; transform: rotate(-4deg); }
+.hero__visual picture { position: relative; z-index: 1; display: block; }
+@media (max-width: 63.99rem) { .float { display: none; } }
+
+.rack { list-style: none; margin: 0; padding: 0 0.5rem; display: flex; justify-content: space-around; gap: 1rem; }
+.rack__item { position: relative; display: flex; flex-direction: column; align-items: center; width: 30%; max-width: 13rem; transform-origin: 50% 0; }
+.rack__hanger { width: 55%; height: auto; margin-top: -0.5rem; fill: none; stroke: #9b8f7c; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.rack__img { width: 100%; height: auto; margin-top: -0.75rem; filter: drop-shadow(0 12px 16px rgba(43, 39, 36, 0.18)); }
+.rack .tag { position: absolute; right: -6%; bottom: 8%; margin: 0; min-width: 0; padding: 1.25rem 0.875rem 0.75rem; max-width: 9.5rem; }
+.rack .tag::before { display: block; left: 50%; top: -1.5rem; height: 1.75rem; }
+.rack .tag__text { font-size: 0.875rem; }
+.rack__item--1 .tag { transform: rotate(-6deg); }
+.rack__item--2 .tag { transform: rotate(5deg); }
+.rack__item--3 .tag { transform: rotate(-3deg); }
+@media (max-width: 47.99rem) {
+  .rack { gap: 0.25rem; padding: 0; }
+  .rack .tag { right: -2%; bottom: 0; padding: 1rem 0.5rem 0.5rem; }
+  .rack .tag__text { font-size: 0.75rem; }
+  .story__rail { display: block; }
+}
+
+.ppw__card { position: relative; overflow: hidden; }
+.ppw__img { position: absolute; right: 1rem; top: 1rem; width: 6.5rem; height: auto; opacity: 0.95; filter: drop-shadow(0 10px 12px rgba(43, 39, 36, 0.16)); }
+@media (min-width: 48rem) { .ppw__img { width: 8.5rem; right: 1.5rem; } }
+
+.pics { display: flex; align-items: flex-end; gap: 0.25rem; height: 4.5rem; margin-bottom: 1rem; position: relative; }
+.pics img { height: 100%; width: auto; filter: drop-shadow(0 6px 8px rgba(43, 39, 36, 0.15)); }
+.pics__eq { position: absolute; left: 3.6rem; top: 0.25rem; font-weight: 700; color: var(--muted); font-size: 1.25rem; }
+.pics--fan img { margin-left: -1.75rem; }
+.pics--fan img:first-child { margin-left: 0; transform: rotate(-8deg); }
+.pics--fan img:nth-child(3) { transform: rotate(7deg); }
+.pics__count { align-self: center; margin-left: 0.5rem; font-weight: 700; font-size: 1.25rem; color: var(--accent-ink); }
+
+/* ── рух (лише коли motion.js увімкнув клас) ─────────────────────────── */
+@keyframes rise { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: none; } }
+@keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+@keyframes sway { 0%, 100% { rotate: -1.6deg; } 50% { rotate: 1.6deg; } }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes pop { 0% { transform: scale(0.4); opacity: 0; } 70% { transform: scale(1.15); } 100% { transform: scale(1); opacity: 1; } }
+
+.motion .float { animation: bob 6s ease-in-out infinite; }
+.motion .float--2 { animation-duration: 7s; animation-delay: -2s; }
+.motion .float--3 { animation-duration: 8s; animation-delay: -4s; }
+.motion .rack__item { animation: sway 5s ease-in-out infinite; }
+.motion .rack__item--2 { animation-duration: 6s; animation-delay: -1.5s; }
+.motion .rack__item--3 { animation-duration: 5.5s; animation-delay: -3s; }
+
+.motion [data-section] .sec-head,
+.motion [data-reveal],
+.motion [data-stagger] > li,
+.motion .story__quote,
+.motion .versus > *,
+.motion .weights--strip { opacity: 0; }
+.motion .is-in .sec-head { animation: rise 0.7s ease-out both; }
+.motion .is-in [data-reveal],
+.motion .is-in .story__quote,
+.motion .is-in .versus > *,
+.motion .is-in .weights--strip { animation: rise 0.7s 0.15s ease-out both; }
+.motion .is-in [data-reveal] + [data-reveal],
+.motion .is-in .versus > :nth-child(3) { animation-delay: 0.35s; }
+.motion .is-in .weights--strip { animation-delay: 0.5s; }
+.motion .is-in [data-stagger] > li { animation: rise 0.6s ease-out both; }
+.motion .is-in [data-stagger] > li:nth-child(2) { animation-delay: 0.12s; }
+.motion .is-in [data-stagger] > li:nth-child(3) { animation-delay: 0.24s; }
+.motion .is-in [data-stagger] > li:nth-child(4) { animation-delay: 0.36s; }
+
+/* Крапки виходів запалюються по одній — видно, як ділиться ціна. */
+.motion .ppw__d--on { opacity: 0; }
+.motion .is-in .ppw__d--on { animation: pop 0.3s ease-out both; animation-delay: calc(0.6s + var(--i) * 25ms); }
+.motion .ppw__result { opacity: 0; }
+.motion .is-in .ppw__result { animation: rise 0.6s 2.1s ease-out both; }
+
+/* Смуги ростуть зліва направо. */
+.motion .review__bar, .motion .weights__bar { transform: scaleX(0); transform-origin: left center; }
+.motion .is-in .review__bar { animation: grow 1s 0.5s cubic-bezier(.2, .7, .2, 1) both; }
+.motion .is-in .weights__bar { animation: grow 1s 0.7s cubic-bezier(.2, .7, .2, 1) both; }
+
+.cards li, .ppw__card, .review__card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.cards li:hover, .ppw__card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px -18px rgba(43, 39, 36, 0.35); }
+
+@media (prefers-reduced-motion: reduce) {
+  .float, .rack__item { animation: none !important; }
+}
+/* Крапки не заходять під картинку речі в куті картки. */
+.ppw__dots { max-width: min(22rem, calc(100% - 7rem)); }
+@media (min-width: 48rem) { .ppw__dots { max-width: min(22rem, calc(100% - 9rem)); } }
+@media (max-width: 47.99rem) {
+  .ppw__img { width: 5rem; }
+  .ppw__name, .ppw__math { padding-right: 5.5rem; }
+}

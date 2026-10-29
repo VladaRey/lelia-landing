@@ -240,7 +240,7 @@ test('скрипти — лише свої й структуровані дан�
   for (const rel of ALL_PAGES) {
     const html = page(rel);
     for (const [tag] of html.matchAll(/<script\b[^>]*>/g)) {
-      const own = /src="(?:\.\.\/)*assets\/(?:vendor\/posthog|analytics|challenge)\.js"/.test(tag);
+      const own = /src="(?:\.\.\/)*assets\/(?:vendor\/posthog|analytics|challenge|motion)\.js"/.test(tag);
       const data = /type="application\/ld\+json"/.test(tag);
       assert.ok(own || data, `${rel}: чужий скрипт ${tag}`);
     }
