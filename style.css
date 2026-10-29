@@ -2044,19 +2044,18 @@ html[lang="pl"] .story__big::after { content: "”"; }
 .suitcase__tag path { stroke: #5c4632; stroke-width: 1.2; fill: none; }
 .suitcase__tag rect { fill: #fffdf8; stroke: #5c4632; stroke-width: 1.2; }
 
-/* ── як почати: три кроки-картки з номером і малюнком ─────────────── */
-.start { counter-reset: none; }
-.start li { position: relative; }
-.start__n { position: absolute; top: 1rem; right: 1rem; width: 1.75rem; height: 1.75rem; border-radius: 50%;
-  display: grid; place-items: center; font-weight: 700; font-size: 0.875rem; background: var(--accent); color: #fff; }
-.snap { height: 100%; aspect-ratio: 1; border-radius: 10px; background: #d9d2c4; display: grid; place-items: center; }
-.snap img { height: 78% !important; }
-.freq { align-items: center; gap: 0.75rem; }
-.freq img { height: 85%; }
-.freq__chips { display: flex; flex-wrap: wrap; gap: 0.375rem; }
-.freq__chip { padding: 0.3rem 0.65rem; border-radius: 999px; font-size: 0.8125rem; font-weight: 600;
-  border: 1px solid var(--rule-faq); color: var(--muted); background: var(--surface); }
-.freq__chip--on { background: var(--accent); border-color: var(--accent); color: #fff; }
-.mini-review { flex-direction: column; justify-content: center; align-items: stretch; gap: 0.5rem; }
-.mini-review .review__bar { margin-top: 0; }
-.mini-review__label { font-weight: 700; font-size: 0.9375rem; }
+/* ── як почати: три скріни з застосунку, під кожним — крок ────────── */
+.start { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; gap: 2rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.start__step .shot { max-width: 15.5rem; }
+.start__text { display: flex; gap: 0.75rem; margin-top: 1.5rem; max-width: 18rem; margin-left: auto; margin-right: auto; }
+.start__n { flex: none; width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center;
+  font-weight: 700; font-size: 0.875rem; background: var(--accent); color: #fff; }
+.start__text h3 { margin: 0.125rem 0 0; }
+.start__text p { margin-top: 0.375rem; color: var(--muted); }
+/* На телефоні кроки гортаються вбік — три високі скріни один під одним задовгі. */
+@media (max-width: 47.99rem) {
+  .start { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1.25rem; margin-left: calc(-1 * var(--pad-x)); margin-right: calc(-1 * var(--pad-x));
+    padding: 0 var(--pad-x) 1rem; scrollbar-width: none; }
+  .start::-webkit-scrollbar { display: none; }
+  .start__step { flex: 0 0 74%; scroll-snap-align: center; }
+}

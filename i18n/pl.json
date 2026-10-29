@@ -214,8 +214,7 @@
   "before.colors.p": "Z typem kolorystycznym widać, czy kolor pasuje przy twarzy — czy lepiej nosić go poniżej ramion.",
   "before.outfits.h": "Z czym nosić",
   "before.outfits.p": "Ile nowych stylizacji da z tym, co już masz. Nie ma z czym — trzeba będzie dokupić coś jeszcze.",
-  "own.s2.c1": "Często",
-  "own.s2.c2": "Czasem",
-  "own.s2.c3": "Dawno",
-  "own.s3.tag": "nosisz 8 z 40"
+  "own.s1.alt": "Dodawanie rzeczy w Lelia: kilka zdjęć naraz, bez tła, przy każdej rzeczy podpowiedziany typ i kolor.",
+  "own.s2.alt": "Dziennik noszenia w Lelia: kalendarz z zaznaczonymi dniami i rzeczy, które były dziś na tobie.",
+  "own.s3.alt": "Przegląd szafy w Lelia: ile rzeczy naprawdę się nosi, a ile tylko wisi."
 }

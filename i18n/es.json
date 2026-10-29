@@ -214,8 +214,7 @@
   "before.colors.p": "Con tu colorimetría ves si te favorece cerca de la cara o si es mejor llevarlo por debajo de los hombros.",
   "before.outfits.h": "Con qué llevarla",
   "before.outfits.p": "Cuántos looks nuevos suma con lo que ya tienes. Si no combina con nada, habrá que comprar algo más.",
-  "own.s2.c1": "A menudo",
-  "own.s2.c2": "A veces",
-  "own.s2.c3": "Hace mucho",
-  "own.s3.tag": "usas 8 de 40"
+  "own.s1.alt": "Añadir prendas en Lelia: varias fotos a la vez, sin fondo, cada prenda con tipo y color sugeridos.",
+  "own.s2.alt": "El registro de uso en Lelia: un calendario con días marcados y lo que llevaste hoy.",
+  "own.s3.alt": "La revisión del armario en Lelia: cuántas prendas se usan de verdad y cuántas solo cuelgan."
 }

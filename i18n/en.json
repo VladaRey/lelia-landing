@@ -214,8 +214,7 @@
   "before.colors.p": "With your colour type, you see whether it suits you near the face — or is better worn below the shoulders.",
   "before.outfits.h": "What to wear it with",
   "before.outfits.p": "How many new outfits it makes with what you already own. Nothing to pair it with means buying something else too.",
-  "own.s2.c1": "Often",
-  "own.s2.c2": "Sometimes",
-  "own.s2.c3": "Ages ago",
-  "own.s3.tag": "you wear 8 of 40"
+  "own.s1.alt": "Adding pieces in Lelia: several photos at once, background removed, each piece with a suggested type and colour.",
+  "own.s2.alt": "The wear log in Lelia: a calendar with marked days and the pieces you wore today.",
+  "own.s3.alt": "The closet review in Lelia: how many pieces actually get worn and how many just hang there."
 }
