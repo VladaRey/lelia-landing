@@ -65,13 +65,25 @@
           </div>
         </div>
 
-        <!-- Заголовок → кнопка → штанга майже порожньої шафи, а посередині
-             телефон із перевіркою: «менше речей» видно з самої картинки.
+        <!-- Заголовок → кнопка → відчинена шафа, у якій небагато речей, а перед
+             нею телефон із перевіркою: це про твою шафу, а не про магазин.
              Речі — з гардероба-прикладу застосунку. -->
         <div class="hero__visual">
-          <div class="hc__rail" aria-hidden="true"></div>
-          <ul class="hc__side hc__side--l" aria-hidden="true"><li class="hc__item"><svg class="hc__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img class="hc__img" src="{{@base}}assets/clothes/leather-jacket.webp" alt="" decoding="async" /></li><li class="hc__item hc__item--extra"><svg class="hc__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img class="hc__img" src="{{@base}}assets/clothes/longsleeve.webp" alt="" decoding="async" /></li></ul>
-          <ul class="hc__side hc__side--r" aria-hidden="true"><li class="hc__item"><svg class="hc__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img class="hc__img" src="{{@base}}assets/clothes/satin-top.webp" alt="" decoding="async" /></li><li class="hc__item hc__item--extra"><svg class="hc__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img class="hc__img" src="{{@base}}assets/clothes/jeans.webp" alt="" decoding="async" /></li></ul>
+          <div class="wd" aria-hidden="true">
+            <span class="wd__door wd__door--l"></span><span class="wd__door wd__door--r"></span>
+            <div class="wd__cell wd__cell--l">
+              <div class="wd__shelf"><div class="wd__fold"><span style="--c:#3a3532"></span><span style="--c:#9aa77d"></span><span style="--c:#e9e2d3"></span></div></div>
+              <div class="wd__rail"></div>
+              <ul class="wd__hang"><li class="wd__item"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/leather-jacket.webp" alt="" decoding="async" /></li><li class="wd__item wd__item--extra"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/longsleeve.webp" alt="" decoding="async" /></li></ul>
+              <div class="wd__floor"><img class="wd__shoes" src="{{@base}}assets/clothes/sneakers.webp" alt="" decoding="async" /></div>
+            </div>
+            <div class="wd__cell wd__cell--r">
+              <div class="wd__shelf"><div class="wd__fold"><span style="--c:#cdbfa4"></span><span style="--c:#5b7290"></span></div></div>
+              <div class="wd__rail"></div>
+              <ul class="wd__hang"><li class="wd__item"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/satin-top.webp" alt="" decoding="async" /></li><li class="wd__item wd__item--extra"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/jeans.webp" alt="" decoding="async" /></li></ul>
+              <div class="wd__floor"></div>
+            </div>
+          </div>
           <div class="phone">
             <picture>
               <source srcset="{{@base}}assets/shots/fitcolor.webp" type="image/webp" />
