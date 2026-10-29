@@ -2041,11 +2041,7 @@ html[lang="pl"] .story__big::after { content: "”"; }
 
 /* Фон перетікає між світлими розділами: вони стають прозорими, а тло <body>
    бере колір того, що зараз посеред екрана. Темний і зелений лишаються зі
-   своїм тлом. Смуга прокрутки праворуч фарбується в колір поточного розділу.
+   своїм тлом.
    Лише з увімкненим рухом; без скрипта кожен розділ має власне тло. */
 html.bgscroll body { background: var(--scroll-bg, var(--paper)); transition: background-color 0.7s ease; }
 html.bgscroll .bg-flow { background: transparent !important; border-color: transparent !important; }
-html { scrollbar-color: var(--sb-thumb, #b9ad99) var(--sb-track, var(--paper)); }
-html::-webkit-scrollbar { width: 12px; }
-html::-webkit-scrollbar-track { background: var(--sb-track, var(--paper)); }
-html::-webkit-scrollbar-thumb { background: var(--sb-thumb, #b9ad99); border-radius: 999px; border: 3px solid var(--sb-track, var(--paper)); }

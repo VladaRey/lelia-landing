@@ -20,9 +20,7 @@
   );
   // Тло, що перетікає: світлі розділи стають прозорими, а <body> фарбується
   // кольором того, що на середині екрана; темний і зелений лишають своє тло.
-  // Смуга прокрутки праворуч бере колір поточного розділу.
   var bodyBg = '';
-  var root = document.documentElement;
   function light(rgb) {
     var m = rgb.match(/\d+(\.\d+)?/g) || [255, 255, 255];
     return (0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2]) / 255 > 0.6;
@@ -32,10 +30,7 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var bg = entry.target.getAttribute('data-bg') || bodyBg;
-        var isLight = light(bg);
-        if (isLight) document.body.style.setProperty('--scroll-bg', bg);
-        root.style.setProperty('--sb-track', bg);
-        root.style.setProperty('--sb-thumb', isLight ? '#b9ad99' : 'rgba(255, 253, 248, 0.55)');
+        if (light(bg)) document.body.style.setProperty('--scroll-bg', bg);
       });
     },
     { rootMargin: '-50% 0px -50% 0px' }
