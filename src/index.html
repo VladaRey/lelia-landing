@@ -102,35 +102,18 @@
     <!-- ── чому з'явилася Lelia: історія авторки ─────────────────── -->
     <section class="section story" data-section="story" data-order="2">
       <div class="wrap story__inner">
-        <!-- Три бирки — те, що висіло в шафі. Бирка, бо саме з нею такі речі
-             й висять; вигляд — гра, текст — слова авторки. -->
-        <!-- Три речі на штанзі, на кожній бирка — те, що висіло в шафі. Речі —
-             з гардероба-прикладу, бирки трохи гойдаються. -->
-        <figure class="story__closet">
-          <div class="story__rail" aria-hidden="true"></div>
-          <ul class="rack">
-            <li class="rack__item rack__item--1">
-              <svg class="rack__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg>
-              <img class="rack__img" src="{{@base}}assets/clothes/faux-fur.webp" alt="" loading="lazy" decoding="async" />
-              <span class="tag"><span class="tag__hole"></span><span class="tag__text">{{story.tag1}}</span></span>
-            </li>
-            <li class="rack__item rack__item--2">
-              <svg class="rack__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg>
-              <img class="rack__img" src="{{@base}}assets/clothes/skirt.webp" alt="" loading="lazy" decoding="async" />
-              <span class="tag"><span class="tag__hole"></span><span class="tag__text">{{story.tag3}}</span></span>
-            </li>
-            <li class="rack__item rack__item--3">
-              <svg class="rack__hanger" viewBox="0 0 80 40" aria-hidden="true"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg>
-              <img class="rack__img" src="{{@base}}assets/clothes/dress.webp" alt="" loading="lazy" decoding="async" />
-              <span class="tag"><span class="tag__hole"></span><span class="tag__text">{{story.tag2}}</span></span>
-            </li>
-          </ul>
-        </figure>
         <blockquote class="story__quote">
           <p class="story__big">{{story.p1}}</p>
           <p class="story__after">{{story.p2}}</p>
           <footer class="story__sign"><span class="story__avatar" aria-hidden="true">{{story.initial}}</span>{{story.sign}}</footer>
         </blockquote>
+        <!-- Три бирки — те, що висіло в шафі. Без самих речей: одяг уже є
+             в шафі на головному екрані, тут головне — слова. -->
+        <ul class="tags">
+          <li class="tag tag--1"><span class="tag__hole"></span><span class="tag__text">{{story.tag1}}</span></li>
+          <li class="tag tag--2"><span class="tag__hole"></span><span class="tag__text">{{story.tag3}}</span></li>
+          <li class="tag tag--3"><span class="tag__hole"></span><span class="tag__text">{{story.tag2}}</span></li>
+        </ul>
       </div>
     </section>
 
