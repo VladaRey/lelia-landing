@@ -37,21 +37,21 @@
         </a>
         <nav class="nav__links" aria-label="{{nav.aria}}">
           <a href="#how">{{nav.how}}</a>
-          <a href="#before">{{nav.more}}</a>
+          <a href="#shop">{{nav.shop}}</a>
+          <a href="#closet">{{nav.closet}}</a>
           <a href="#not">{{nav.limits}}</a>
           {{@langswitch}}
         </nav>
       </div>
     </header>
 
-    <!-- ── 1 · герой ──────────────────────────────────────────────── -->
-    <section class="section" id="top" data-section="hero" data-order="1">
-      <div class="wrap hero__inner">
-        <div>
-          <h1 class="display hero__title">
-            {{hero.title}}
-          </h1>
-          <div class="get get--bare">
+    <!-- ── 1 · герой: обіцянка й головний екран застосунку (1.4 v11, макет A) ── -->
+    <section class="section hero2" id="top" data-section="hero" data-order="1">
+      <div class="wrap hero2__inner">
+        <div class="hero2__text">
+          <h1 class="display hero2__title">{{hero.title}}</h1>
+          <p class="lede hero2__lede">{{hero.lede}}</p>
+          <div class="get get--bare hero2__get">
             <a class="appstore" href="{{@store}}" data-place="hero">
               <svg class="appstore__logo" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false">
                 <path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.922-.987 1.83 0 2.36.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.208-1.23-3.234-4.883-.026-3.055 2.497-4.52 2.611-4.588-1.429-2.104-3.649-2.34-4.404-2.379-2-.156-3.661 1.09-4.585 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.346.104 2.719-.688 3.56-1.701" />
@@ -61,118 +61,112 @@
                 <span class="appstore__name">App Store</span>
               </span>
             </a>
+            <p class="fineprint">{{hero.fine}}</p>
           </div>
         </div>
-
-        <!-- Заголовок → кнопка → відчинена шафа, у якій небагато речей, а перед
-             нею телефон із перевіркою: це про твою шафу, а не про магазин.
-             Речі — з гардероба-прикладу застосунку. -->
-        <div class="hero__visual">
-          <div class="wd" aria-hidden="true">
-            <span class="wd__door wd__door--l"></span><span class="wd__door wd__door--r"></span>
-            <div class="wd__cell wd__cell--l">
-              <div class="wd__shelf"><div class="wd__fold"><span style="--c:#3a3532"></span><span style="--c:#9aa77d"></span><span style="--c:#e9e2d3"></span></div></div>
-              <div class="wd__rail"></div>
-              <ul class="wd__hang"><li class="wd__item"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/leather-jacket.webp" alt="" decoding="async" /></li><li class="wd__item wd__item--extra"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/longsleeve.webp" alt="" decoding="async" /></li></ul>
-              <div class="wd__floor"><img class="wd__shoes" src="{{@base}}assets/clothes/sneakers.webp" alt="" decoding="async" /></div>
-            </div>
-            <div class="wd__cell wd__cell--r">
-              <div class="wd__shelf"><div class="wd__fold"><span style="--c:#cdbfa4"></span><span style="--c:#5b7290"></span></div></div>
-              <div class="wd__rail"></div>
-              <ul class="wd__hang"><li class="wd__item"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/satin-top.webp" alt="" decoding="async" /></li><li class="wd__item wd__item--extra"><svg class="wd__hanger" viewBox="0 0 80 40"><path d="M40 14c0-4 6-4 6-9a6 6 0 0 0-12 0"/><path d="M40 14 4 34h72z"/></svg><img src="{{@base}}assets/clothes/jeans.webp" alt="" decoding="async" /></li></ul>
-              <div class="wd__floor"><img class="wd__bag" src="{{@base}}assets/clothes/bag-grey.webp" alt="" decoding="async" /><img class="wd__bag" src="{{@base}}assets/clothes/bag-pink.webp" alt="" decoding="async" /></div>
-            </div>
-          </div>
-          <div class="phone">
-            <picture>
-              <source srcset="{{@base}}assets/shots/fitcolor.webp" type="image/webp" />
-              <img
-                class="phone__screen"
-                src="{{@base}}assets/shots/fitcolor.jpg"
-                width="540" height="1169"
-                loading="eager" fetchpriority="high" decoding="async"
-                alt="{{hero.alt}}" />
-            </picture>
-          </div>
+        <div class="hero2__shot">
+          <picture>
+            <source srcset="{{@base}}assets/shots/check.webp" type="image/webp" />
+            <img class="shot shot--lift" src="{{@base}}assets/shots/check.jpg" width="540" height="1169" loading="eager" fetchpriority="high" decoding="async" alt="{{hero.alt}}" />
+          </picture>
         </div>
       </div>
     </section>
 
-    <!-- ── чому з'явилася Lelia: історія авторки ─────────────────── -->
+    <!-- ── чому з'явилася Lelia: історія авторки, лише словами ───────── -->
     <section class="section story" data-section="story" data-order="2">
-      <div class="wrap story__inner">
+      <div class="wrap story__inner story__inner--solo">
         <blockquote class="story__quote">
           <p class="story__big">{{story.p1}}</p>
           <p class="story__after">{{story.p2}}</p>
           <footer class="story__sign"><span class="story__avatar" aria-hidden="true">{{story.initial}}</span>{{story.sign}}</footer>
         </blockquote>
-        <!-- Три бирки — те, що висіло в шафі. Без самих речей: одяг уже є
-             в шафі на головному екрані, тут головне — слова. -->
-        <ul class="tags">
-          <li class="tag tag--1"><span class="tag__hole"></span><span class="tag__text">{{story.tag1}}</span></li>
-          <li class="tag tag--2"><span class="tag__hole"></span><span class="tag__text">{{story.tag3}}</span></li>
-          <li class="tag tag--3"><span class="tag__hole"></span><span class="tag__text">{{story.tag2}}</span></li>
-        </ul>
       </div>
     </section>
 
-    <!-- ── 3 · у магазині: головна дія ─────────────────────────── -->
-    <section class="section tone-sage" id="how" data-section="shop" data-order="3">
-      <div class="wrap">
-        <div class="sec-head">
+    <!-- ── зранку · у магазині · що купити · шафа — по екрану на кожен момент ── -->
+    <section class="section feat-sec" id="how" data-section="morning" data-order="3">
+      <div class="wrap feat feat--flip">
+        <div class="feat__text">
+          <h2 class="display h-section">{{morning.h}}</h2>
+          <p class="lede">{{morning.p}}</p>
+          <ul class="ticks">
+            <li>{{morning.li1}}</li>
+            <li>{{morning.li2}}</li>
+            <li>{{morning.li3}}</li>
+          </ul>
+        </div>
+        <div class="feat__shot">
+            <picture>
+              <source srcset="{{@base}}assets/shots/today.webp" type="image/webp" />
+              <img class="shot shot--lift" src="{{@base}}assets/shots/today.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{morning.alt}}" />
+            </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feat-sec" id="shop" data-section="shop" data-order="4">
+      <div class="wrap feat">
+        <div class="feat__text">
           <h2 class="display h-section">{{shop.h}}</h2>
+          <p class="lede">{{shop.p}}</p>
+          <ul class="ticks">
+            <li>{{shop.li1}}</li>
+            <li>{{shop.li2}}</li>
+            <li>{{shop.li3}}</li>
+          </ul>
         </div>
-
-        <div class="split split--shop">
-          <picture>
-            <source srcset="{{@base}}assets/shots/verdict.webp" type="image/webp" />
-            <img class="shot shot--lift" src="{{@base}}assets/shots/verdict.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{verdict.alt}}" />
-          </picture>
-          <div class="flow" role="group" aria-label="{{flow.aria}}">
-          <ol class="flow__steps">
-            <li><span class="flow__n">1</span><h3>{{flow.s1.h}}</h3><p>{{flow.s1.p}}</p></li>
-            <li><span class="flow__n">2</span><h3>{{flow.s2.h}}</h3><p>{{flow.s2.p}}</p></li>
-            <li><span class="flow__n">3</span><h3>{{flow.s3.h}}</h3><p>{{flow.s3.p}}</p></li>
-          </ol>
-        </div>
+        <div class="feat__shot">
+            <picture>
+              <source srcset="{{@base}}assets/shots/verdict.webp" type="image/webp" />
+              <img class="shot shot--lift" src="{{@base}}assets/shots/verdict.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{shop.alt}}" />
+            </picture>
         </div>
       </div>
     </section>
 
-    <!-- ── 05 · перш ніж купити: що стримує зайву покупку ─────────── -->
-    <section class="section" id="before" data-section="before" data-order="4">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 class="display h-section">{{before.h}}</h2>
-          <p class="lede">{{before.lede}}</p>
+    <section class="section feat-sec" id="need" data-section="need" data-order="5">
+      <div class="wrap feat feat--flip">
+        <div class="feat__text">
+          <h2 class="display h-section">{{need.h}}</h2>
+          <p class="lede">{{need.p}}</p>
+          <ul class="ticks">
+            <li>{{need.li1}}</li>
+            <li>{{need.li2}}</li>
+            <li>{{need.li3}}</li>
+          </ul>
         </div>
-        <ul class="cards more" data-stagger>
-          <li>
-            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/tshirt-black.webp" alt="" loading="lazy" decoding="async" /><span class="pics__eq">≈</span><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /></div>
-            <h3>{{before.similar.h}}</h3>
-            <p class="prose">{{before.similar.p}}</p>
-          </li>
-          <li>
-            <div class="pics pics--fan" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/hoodie.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/longsleeve.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /><span class="pics__count">×6</span></div>
-            <h3>{{before.plenty.h}}</h3>
-            <p class="prose">{{before.plenty.p}}</p>
-          </li>
-          <li>
-            <div class="more__viz more__viz--palette" aria-hidden="true"><span style="background:#b5606c"></span><span style="background:#c98c8c"></span><span style="background:#5e7a3e"></span><span style="background:#3e5a8c"></span><span style="background:#cdbfa4"></span></div>
-            <h3>{{before.colors.h}}</h3>
-            <p class="prose">{{before.colors.p}}</p>
-          </li>
-          <li>
-            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/leather-jacket.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/jeans.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/sneakers.webp" alt="" loading="lazy" decoding="async" /></div>
-            <h3>{{before.outfits.h}}</h3>
-            <p class="prose">{{before.outfits.p}}</p>
-          </li>
-        </ul>
+        <div class="feat__shot">
+            <picture>
+              <source srcset="{{@base}}assets/shots/want.webp" type="image/webp" />
+              <img class="shot shot--lift" src="{{@base}}assets/shots/want.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{need.alt}}" />
+            </picture>
+        </div>
       </div>
     </section>
 
-    <!-- ── 02 · ціна за вихід: дві бирки, одна арифметика ─────────── -->
-    <section class="section tone-ink" data-section="cost" data-order="5">
+    <section class="section feat-sec" id="closet" data-section="closet" data-order="6">
+      <div class="wrap feat">
+        <div class="feat__text">
+          <h2 class="display h-section">{{closet.h}}</h2>
+          <p class="lede">{{closet.p}}</p>
+          <ul class="ticks">
+            <li>{{closet.li1}}</li>
+            <li>{{closet.li2}}</li>
+            <li>{{closet.li3}}</li>
+          </ul>
+        </div>
+        <div class="feat__shot">
+            <picture>
+              <source srcset="{{@base}}assets/shots/wardrobe.webp" type="image/webp" />
+              <img class="shot shot--lift" src="{{@base}}assets/shots/wardrobe.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{closet.alt}}" />
+            </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ціна за вихід: дві бирки, одна арифметика ─────────────────── -->
+    <section class="section tone-ink" data-section="cost" data-order="7">
       <div class="wrap">
         <div class="sec-head">
           <h2 class="display h-section">{{cost.h}}</h2>
@@ -209,98 +203,21 @@
       </div>
     </section>
 
-    <!-- ── 07 · пояснення оцінок: число проти причини, без скріна ──── -->
-    <section class="section" id="why" data-section="wedge" data-order="6">
+    <!-- ── пояснення: оцінки словами, кожна з причиною ───────────────── -->
+    <section class="section feat-sec" id="why" data-section="wedge" data-order="8">
       <div class="wrap">
         <div class="sec-head">
           <h2 class="display h-section">{{wedge.h}}</h2>
+          <p class="lede">{{wedge.p}}</p>
         </div>
-
         <div class="versus versus--solo">
           <div class="reason-card">
-            <!-- Перша причина працює на оцінку, друга — штраф за одну з трьох
-                 осей. Позначка повторює це кольором. -->
             <ul>
               <li class="reason reason--plus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 12.4l3 3 6-6.3" /></svg><span>{{quote.reason1}}</span></li>
               <li class="reason reason--minus"><svg class="reason__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 12h8" /></svg><span>{{quote.reason2}}</span></li>
             </ul>
           </div>
         </div>
-
-        <figure class="weights weights--strip">
-          <figcaption class="eyebrow">{{weights.title}}</figcaption>
-          <div class="weights__bar" aria-hidden="true">
-            <span class="w1" style="flex: 45"></span><span class="w2" style="flex: 23"></span><span class="w3" style="flex: 20"></span><span class="w4" style="flex: 12"></span>
-          </div>
-          <ul class="weights__legend">
-            <li><span class="key w1"></span>{{weights.color}} <b>45%</b></li>
-            <li><span class="key w2"></span>{{weights.occasion}} <b>23%</b></li>
-            <li><span class="key w3"></span>{{weights.season}} <b>20%</b></li>
-            <li><span class="key w4"></span>{{weights.pattern}} <b>12%</b></li>
-          </ul>
-          <p class="weights__note">{{wedge.p}}</p>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ── як почати: сфотографувати → позначити носіння → розбір ───── -->
-    <section class="section band" data-section="own" data-order="7">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 class="display h-section">{{own.h}}</h2>
-        </div>
-
-        <ol class="start">
-          <li class="start__step">
-            <picture>
-              <source srcset="{{@base}}assets/shots/start-1.webp" type="image/webp" />
-              <img class="shot shot--lift" src="{{@base}}assets/shots/start-1.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{own.s1.alt}}" />
-            </picture>
-            <div class="start__text"><span class="start__n">1</span><div><h3>{{own.s1.h}}</h3><p>{{own.s1.p}}</p></div></div>
-          </li>
-          <li class="start__step">
-            <picture>
-              <source srcset="{{@base}}assets/shots/start-2.webp" type="image/webp" />
-              <img class="shot shot--lift" src="{{@base}}assets/shots/start-2.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{own.s2.alt}}" />
-            </picture>
-            <div class="start__text"><span class="start__n">2</span><div><h3>{{own.s2.h}}</h3><p>{{own.s2.p}}</p></div></div>
-          </li>
-          <li class="start__step">
-            <picture>
-              <source srcset="{{@base}}assets/shots/start-3.webp" type="image/webp" />
-              <img class="shot shot--lift" src="{{@base}}assets/shots/start-3.jpg" width="540" height="1169" loading="lazy" decoding="async" alt="{{own.s3.alt}}" />
-            </picture>
-            <div class="start__text"><span class="start__n">3</span><div><h3>{{own.s3.h}}</h3><p>{{own.s3.p}}</p></div></div>
-          </li>
-        </ol>
-        <div class="start__dots" aria-hidden="true"><button type="button" tabindex="-1" class="is-on"></button><button type="button" tabindex="-1"></button><button type="button" tabindex="-1"></button></div>
-        <p class="sec-foot">{{own.first.p}}</p>
-      </div>
-    </section>
-
-    <!-- ── 06 · і ще: щоденне, не про покупки ──────────────────────── -->
-    <section class="section tone-green" id="more" data-section="more" data-order="8">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 class="display h-section">{{more.h}}</h2>
-        </div>
-        <ul class="cards more" data-stagger>
-          <li>
-            <div class="pics" aria-hidden="true"><img class="" src="{{@base}}assets/clothes/longsleeve.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/skirt.webp" alt="" loading="lazy" decoding="async" /><img class="" src="{{@base}}assets/clothes/sneakers.webp" alt="" loading="lazy" decoding="async" /></div>
-            <h3>{{more.today.h}}</h3>
-            <p class="prose">{{more.today.p}}</p>
-          </li>
-          <li>
-            <div class="ch__viz ch__viz--ten" aria-hidden="true"><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--done"></span><span class="ch__c ch__c--today"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span><span class="ch__c ch__c--rest"></span></div>
-            <h3>{{more.challenges.h}}</h3>
-            <p class="prose">{{more.challenges.p}}</p>
-          </li>
-          <li>
-            <div class="pics pics--trip" aria-hidden="true"><svg class="suitcase" viewBox="0 0 64 72"><path class="suitcase__handle" d="M24 14V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6"/><rect class="suitcase__body" x="8" y="14" width="48" height="50" rx="7"/><path class="suitcase__strap" d="M22 14v50M42 14v50"/><circle class="suitcase__wheel" cx="17" cy="67" r="3"/><circle class="suitcase__wheel" cx="47" cy="67" r="3"/><g class="suitcase__tag"><path d="M50 22l7 6"/><rect x="53" y="26" width="9" height="13" rx="2" transform="rotate(-12 57 32)"/></g></svg><img src="{{@base}}assets/clothes/tshirt.webp" alt="" loading="lazy" decoding="async" /><img src="{{@base}}assets/clothes/jeans.webp" alt="" loading="lazy" decoding="async" /></div>
-            <h3>{{more.trips.h}}</h3>
-            <p class="prose">{{more.trips.p}}</p>
-          </li>
-        </ul>
       </div>
     </section>
 
